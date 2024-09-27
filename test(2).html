@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 정보 허브</title>
+    <link rel="stylesheet" href="style(2).css">
+</head>
+<body>
+
+    <header>
+        <h1>게임 정보 허브</h1>
+    </header>
+
+    <nav>
+        <a href="#">서버 목록</a>
+        <a href="#">서버 니트라도</a>
+        <a href="#">공룡</a>
+        <a href="#">조합법</a>
+    </nav>
+
+    <div class="container">
+        <section class="news">
+            <h2>현재 운영중인 서버 목록</h2>
+
+            <!-- PVE 및 PVP 버튼 -->
+            <button class="server-btn" onclick="showServerInfo('PVE')">PVE</button>
+            <button class="server-btn" onclick="showServerInfo('PVP')">PVP</button>
+
+            <article id="server-info">
+                <h3>서버 설정을 선택해주세요.</h3>
+                <p>현재 운영이 중단 됬거나 여러가지 논란이 있는 서버들은 목록에 제외 됩니다</p>
+            </article>
+
+            <!-- 서버 목록 추가 -->
+            <div class="server-list" id="server-list">
+                <!-- 서버 정보는 JavaScript를 통해 동적으로 추가됩니다. -->
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 게임 정보 허브. 모든 권리 보유.</p>
+        </footer>
+    </div>
+
+    <script>
+        const pveServers = [
+            { name: "모바일아크뉴비이벤트서버", opendate: "2024-09-20", players: "20" ,kakaoplayer: "53", link: "모바일아크뉴비이벤트서버.html"},
+            { name: "korea2024", opendate: "2024-05-10", players: "12" ,kakaoplayer: "20", link: "korea2024server.html" },
+        ];
+
+        const pvpServers = [
+        ];
+
+        function showServerInfo(type) {
+            const serverInfo = document.getElementById('server-info');
+            const serverList = document.getElementById('server-list');
+            serverList.innerHTML = ''; // 기존 서버 목록 초기화
+
+            if (type === 'PVE') {
+                serverInfo.innerHTML = '<h3>PVE 서버 정보</h3><p>현재 운영중인 pve서버 목록들 입니다.</p>';
+                pveServers.forEach(server => {
+                    serverList.innerHTML += `
+                        <div class="server-item" onclick="location.href='${server.link || '#'}'">
+                            <h4>${server.name}</h4>
+                            <p>오픈 날짜: ${server.opendate}</p>
+                            <p>서버 인원수: ${server.players}</p>
+                            <p>카카오톡 방 인원수: ${server.kakaoplayer}</p>
+                        </div>
+                    `;
+                });
+            } else if (type === 'PVP') {
+                serverInfo.innerHTML = '<h3>PVP 서버 정보</h3><p>현재 운영중인 pvp서버 목록들 입니다.</p>';
+                pvpServers.forEach(server => {
+                    serverList.innerHTML += `
+                        <div class="server-item">
+                            <h4>${server.name}</h4>
+                            <p>오픈 날짜: ${server.opendate}</p>
+                            <p>서버 인원수: ${server.players}</p>
+                            <p>카카오톡 방 인원수: ${server.kakaoplayer}</p>
+                        </div>
+                    `;
+                });
+            }
+        }
+    </script>
+</body>
+</html>
