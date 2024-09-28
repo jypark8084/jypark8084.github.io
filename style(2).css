@@ -139,3 +139,14 @@ button.server-btn:active {
     padding: 5px;
     border-radius: 5px;
 }
+#hidden-content {
+    display: none; /* 처음에 공지 내용은 감춰짐 */
+}
+#hidden-content.visible {
+    display: block; /* 클릭 후 공지 내용을 보여줌 */
+}
+/* 커서가 포인터 모양으로 변경되도록 스타일 추가 */
+.toggle-button {
+    cursor: pointer;
+    color: blue; /* 클릭 가능하다는 느낌을 주기 위해 파란색으로 설정 */
+}
