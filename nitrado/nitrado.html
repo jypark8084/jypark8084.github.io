@@ -20,15 +20,63 @@
     </nav>
 
     <div class="container">
-        <button class="option-btn">니트라도 서버 설정</button>
-        <button class="option-btn">니트라도 백섭 방법</button>
-        <button class="option-btn">니트라도 계정 생성 방법</button>
-        <button class="option-btn">LegitServer 서버 설정 방법(아이폰만 가능)</button>
+        <button class="option-btn" onclick="showInfo('serverbackup')">니트라도 백섭 방법</button>
+        <button class="option-btn" onclick="showInfo('serversetting')">니트라도 서버 설정</button>
+        <button class="option-btn" onclick="showInfo('accountcreate')">니트라도 계정 생성 방법</button>
+        <button class="option-btn" onclick="showInfo('LegitServersetting')">LegitServer 서버 설정 방법(아이폰만 가능)</button>
+    </div>
+
+    <div id="info-box" style="display:none;">
+        <h3 id="info-title"></h3>
+        <p id="info-content"></p>
     </div>
 
     <footer>
         <p>&copy; 2024 게임 정보 허브. 모든 권리 보유.</p>
     </footer>
+
+    <script>
+        function showInfo(type) {
+            var title = document.getElementById('info-title');
+            var content = document.getElementById('info-content');
+            var infoBox = document.getElementById('info-box');
+
+            if (type === 'serverbackup') {
+                title.textContent = '니트라도 백섭 방법';
+                content.innerHTML = '<h2>안녕하세요</h2>'
+
+                                    '<img src="jypark8084.github.io\settingiamge\카카오톡.png" alt="백섭 예시 이미지" style="width:100%; max-width:600px;">';
+            } else if (type === 'serversetting') {
+                title.textContent = '니트라도 서버 설정 방법';
+                content.innerHTML = '<ol>' +
+                                    '<li>니트라도 계정에 로그인한 후 서버 대시보드로 이동하세요.</li>' +
+                                    '<li>서버 설정 메뉴에서 원하는 설정을 선택합니다.</li>' +
+                                    '<li>서버 이름, 암호, 슬록 수 등을 설정하고 저장하세요.</li>' +
+                                    '<li>변경 사항을 저장한 후 서버를 재시작하세요.</li>' +
+                                    '</ol>';
+            }
+            else if (type === 'accountcreate') {
+                title.textContent = '니트라도 계정 생성 방법';
+                content.innerHTML = '<ol>' +
+                                    '<li>니트라도 계정에 로그인한 후 서버 대시보드로 이동하세요.</li>' +
+                                    '<li>서버 설정 메뉴에서 원하는 설정을 선택합니다.</li>' +
+                                    '<li>서버 이름, 암호, 슬록 수 등을 설정하고 저장하세요.</li>' +
+                                    '<li>변경 사항을 저장한 후 서버를 재시작하세요.</li>' +
+                                    '</ol>';
+            }
+            else if (type === 'LegitServersetting') {
+                title.textContent = 'Legit서버 설정 방법';
+                content.innerHTML = '<ol>' +
+                                    '<li>니트라도 계정에 로그인한 후 서버 대시보드로 이동하세요.</li>' +
+                                    '<li>서버 설정 메뉴에서 원하는 설정을 선택합니다.</li>' +
+                                    '<li>서버 이름, 암호, 슬록 수 등을 설정하고 저장하세요.</li>' +
+                                    '<li>변경 사항을 저장한 후 서버를 재시작하세요.</li>' +
+                                    '</ol>';
+            }
+
+            infoBox.style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
