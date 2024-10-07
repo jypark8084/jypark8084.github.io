@@ -184,11 +184,16 @@ button.server-btn:active {
     }
 }
 
+.nitradobutton-container {
+    text-align: right;
+    margin-bottom: 20px; /* 필요에 따라 간격 조절 */
+}
+
 .nitradobutton {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: rgb(0, 0, 0);
+    color: white;
     background-color: hsl(44, 85%, 53%);
     text-decoration: none;
     border-radius: 5px;
@@ -196,10 +201,6 @@ button.server-btn:active {
     cursor: pointer;
 }
 
-.button:hover {
+.nitradobutton:hover {
     background-color: darkblue;
-}
-
-.nitradobutton-container {
-    text-align: right;
 }
