@@ -163,7 +163,7 @@ button.server-btn:active {
     margin: 5px;
     padding: 20px;
     text-align: center;
-    background-color: #edb622;
+    background-color: hsl(44, 85%, 53%);
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 3px;
@@ -182,4 +182,24 @@ button.server-btn:active {
     .option-btn {
         width: 100%; /* 모바일 화면에서는 버튼을 한 줄로 */
     }
+}
+
+.nitradobutton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: hsl(44, 85%, 53%);
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: darkblue;
+}
+
+.nitradobutton-container {
+    text-align: right;
 }
