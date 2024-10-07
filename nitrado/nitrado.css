@@ -210,8 +210,18 @@ button.server-btn:active {
     /*text-align: center; /* 텍스트를 가운데 정렬 
 } */
 
+/* 기본 이미지 스타일 */
 .accountcreatecenter img {
-    margin: 0 auto; /* 이미지의 마진을 자동으로 설정하여 가운데 정렬 */
-    /*display: block; /* 이미지를 블록 요소로 만들어서 가운데 정렬 가능하게 함 */
+    width: 100%; /* 이미지가 부모 요소의 너비를 가득 채우도록 설정 */
+    max-width: 500px; /* 최대 너비를 설정하여 이미지가 너무 커지지 않도록 함 */
+    height: auto; /* 이미지의 비율을 유지하도록 함 */
 }
+
+/* 모바일 전용 스타일 */
+@media (max-width: 768px) {
+    .accountcreatecenter img {
+        max-width: 100%; /* 모바일 화면에서는 이미지가 화면을 꽉 채우도록 설정 */
+    }
+}
+
 
