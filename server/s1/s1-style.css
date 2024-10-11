@@ -1,0 +1,152 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #444;
+}
+
+/* 목록 1~4 호버시 노란색 밑줄 애니메이션 */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;  /* 처음에는 밑줄이 보이지 않음 */
+    height: 3px;
+    background-color: #ffcc00;
+    left: 0;
+    bottom: 0;
+    transition: width 0.4s ease; /* 애니메이션이 서서히 실행되도록 설정 */
+}
+
+nav a:hover::after {
+    width: 100%;  /* 마우스를 올렸을 때 왼쪽에서 오른쪽으로 밑줄이 그어짐 */
+}
+
+.sub-menu {
+    display: none; /* 기본적으로 숨김 */
+    padding-left: 20px;
+    margin-top: 10px;
+    position: absolute; /* 서브 메뉴를 절대 위치로 설정 */
+    background-color: #444; /* 서브 메뉴 배경색 */
+    z-index: 10; /* 서브 메뉴가 상위 메뉴 위에 표시되도록 설정 */
+}
+
+.sub-menu a {
+    display: block;
+    margin: 5px 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 기타 스타일 */
+.container {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+}
+
+/* PVE & PVP 버튼 스타일 */
+button.server-btn {
+    background-color: #ff4757;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+button.server-btn:hover {
+    background-color: #ff6b81;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+button.server-btn:active {
+    background-color: #e84118;
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 서버 목록 스타일 */
+.server-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 각 서버 박스 사이 간격 */
+    margin-top: 20px;
+}
+
+.server-item {
+    background-color: #292929; /* 배경 색상 */
+    border: 1px solid #ffcc00; /* 테두리 색상 */
+    border-radius: 10px; /* 둥글게 */
+    padding: 15px; /* 패딩 추가 */
+    width: 200px; /* 너비 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+    transition: transform 0.3s; /* 마우스 오버 시 애니메이션 */
+}
+
+.server-item:hover {
+    transform: scale(1.05); /* 마우스 오버 시 확대 효과 */
+}
+
+#hidden-content {
+    display: none; /* 처음에 공지 내용은 감춰짐 */
+}
+#hidden-content.visible {
+    display: block; /* 클릭 후 공지 내용을 보여줌 */
+}
+/* 커서가 포인터 모양으로 변경되도록 스타일 추가 */
+.toggle-button {
+    cursor: pointer;
+    color: yellow; /* 클릭 가능하다는 느낌을 주기 위해 파란색으로 설정 */
+    padding: 5px;
+    border-radius: 5px;
+}
+#hidden-content {
+    display: none; /* 처음에 공지 내용은 감춰짐 */
+}
+#hidden-content.visible {
+    display: block; /* 클릭 후 공지 내용을 보여줌 */
+}
+/* 커서가 포인터 모양으로 변경되도록 스타일 추가 */
+.toggle-button {
+    cursor: pointer;
+    color: blue; /* 클릭 가능하다는 느낌을 주기 위해 파란색으로 설정 */
+}
