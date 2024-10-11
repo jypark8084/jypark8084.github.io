@@ -150,3 +150,26 @@ button.server-btn:active {
     cursor: pointer;
     color: blue; /* 클릭 가능하다는 느낌을 주기 위해 파란색으로 설정 */
 }
+
+/* 스타일 업데이트 */
+.server-btn {
+    display: inline-block; /* 버튼을 가로로 정렬 */
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+}
+
+.server-list {
+    display: flex; /* 플렉스 박스로 설정하여 가로 정렬 */
+    flex-wrap: wrap; /* 화면 크기에 맞춰 줄바꿈 */
+    justify-content: space-between; /* 가로 공간을 균등하게 분배 */
+}
+
+.server-list article {
+    flex: 0 1 48%; /* 각 아이템이 가로로 48%의 너비를 차지 */
+    margin: 10px;
+}
+
