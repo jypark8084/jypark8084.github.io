@@ -222,6 +222,9 @@ button.server-btn:active {
     .accountcreatecenter img {
         max-width: 100%; /* 모바일 화면에서는 이미지가 화면을 꽉 채우도록 설정 */
     }
+    .serverbackup img {
+        max-width: 100%; /* 모바일 화면에서는 이미지가 화면을 꽉 채우도록 설정 */
+    }
 }
 
 .warning-text {
