@@ -155,21 +155,13 @@ button.server-btn:active {
 /* 모바일 화면에서만 텍스트 크기 작게 설정 */
 @media (max-width: 768px) {
     nav a {
-        font-size: 10px; /* 모바일 화면에서의 텍스트 크기 */
+        font-size: 14px; /* 모바일 화면에서의 텍스트 크기 */
     }
     
     header h1 {
         font-size: 1.8rem; /* 헤더의 제목 크기도 줄이기 */
     }
 
-    button.server-btn {
-        font-size: 14px; /* 서버 버튼 텍스트 크기 */
-        padding: 10px 20px; /* 버튼 크기도 줄임 */
-    }
-
-    .server-item {
-        width: 150px; /* 서버 목록 항목 크기 조정 */
-    }
     
     footer {
         font-size: 12px; /* 푸터의 글씨 크기 조정 */
