@@ -224,4 +224,7 @@ button.server-btn:active {
     }
 }
 
+.warning-text {
+    color: #e84118;
 
+}
