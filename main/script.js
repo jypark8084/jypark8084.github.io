@@ -6,7 +6,11 @@
             kakaoplayer: "53",
             link: "../server/s1/s1.html"},
 
-            { name: "korea2024", opendate: "2024-05-10", players: "12" ,kakaoplayer: "20", link: "korea2024server.html" },
+            { name: "korea2024", 
+            opendate: "2024-05-10", 
+            players: "12" ,
+            kakaoplayer: "20", 
+            link: "../server/s2/s2.html" },
         ];
         const pvpServers = [
         ];

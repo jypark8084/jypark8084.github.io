@@ -17,7 +17,8 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
-h1, h2, h3, h4 {
+
+s2-h1, s2-h2, s2-h3, s2-h4 {
     color: #FFD700;
 }
 .warning {
