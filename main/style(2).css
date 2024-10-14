@@ -151,4 +151,18 @@ button.server-btn:active {
     color: blue; /* 클릭 가능하다는 느낌을 주기 위해 파란색으로 설정 */
 }
 
+.more.see {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    left: 930px; /* 가로 위치를 픽셀 단위로 지정 */
+    top: 160px; /* 세로 위치를 픽셀 단위로 지정 */
+}
 
+@media screen and (max-width: 600px) {
+    .more.see {
+        left: 420px; /* 모바일 화면에서의 가로 위치 */
+        top: 160px; /* 모바일 화면에서의 세로 위치 */
+    }
+}
