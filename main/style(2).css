@@ -152,17 +152,34 @@ button.server-btn:active {
 }
 
 .more.see {
-    position: absolute;
     display: flex;
     justify-content: flex-end;
     margin-right: 10px;
-    left: 930px; /* 가로 위치를 픽셀 단위로 지정 */
-    top: 160px; /* 세로 위치를 픽셀 단위로 지정 */
+    margin-left: 10px ;
 }
 
 @media screen and (max-width: 600px) {
     .more.see {
-        left: 420px; /* 모바일 화면에서의 가로 위치 */
-        top: 160px; /* 모바일 화면에서의 세로 위치 */
+        margin-right: 10px;
+        margin-left: 10px ;
     }
+}
+
+.custom-checkbox {
+    display: none;
+}
+
+.custom-checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-checkbox + label img {
+    width: 45px;
+    height: 30px;
+}
+
+.custom-checkbox:checked + label img {
+    opacity: 0.5; /* 체크 시 이미지의 불투명도를 조정할 수 있습니다 */
 }
