@@ -176,8 +176,8 @@ button.server-btn:active {
 }
 
 .custom-checkbox + label img {
-    width: 45px;
-    height: 30px;
+    width: 50px;
+    height: 60px;
 }
 
 .custom-checkbox:checked + label img {
