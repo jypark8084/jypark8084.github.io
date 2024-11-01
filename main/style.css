@@ -133,3 +133,34 @@ button.server-btn:active {
     width: 50px;
     height: 60px;
 }
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* 전체 텍스트 크기 감소 */
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    button.server-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .server-item {
+        font-size: 14px;
+    }
+}
