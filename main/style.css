@@ -1,0 +1,135 @@
+/*style.css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    background-image: url('ultlmateark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffffd0;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.posts {
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+}
+
+.posts h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+button.server-btn {
+    background-color: #ff4757;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+button.server-btn:hover {
+    background-color: #ff6b81;
+    transform: translateY(-5px);
+}
+
+button.server-btn:active {
+    background-color: #e84118;
+}
+.server-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 각 서버 박스 사이 간격 */
+    margin-top: 20px;
+}
+
+.server-item {
+    background-color: #292929;
+    border: 1px solid #ffcc00;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    height: 150px; /* 고정 높이 추가 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 수직 가운데 정렬 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.server-item:hover {
+    transform: scale(1.05);
+}
+
+
+.server-item:hover {
+    transform: scale(1.05); /* 마우스 오버 시 확대 효과 */
+}
+
+.more.see {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.custom-checkbox {
+    display: none;
+}
+
+.custom-checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-checkbox + label img {
+    width: 50px;
+    height: 60px;
+}

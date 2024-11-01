@@ -23,7 +23,6 @@ function showServerInfo(type) {
     serverList.innerHTML = ''; // 기존 서버 목록 초기화
 
     if (type === 'PVE') {
-        serverInfo.innerHTML = '<h3>PVE 서버 정보</h3><p>현재 운영중인 PVE 서버 목록입니다.</p>';
         pveServers.forEach(server => {
             serverList.innerHTML += `
                 <div class="server-item" onclick="location.href='${server.link || '#'}'">
@@ -35,7 +34,6 @@ function showServerInfo(type) {
             `;
         });
     } else if (type === 'PVP') {
-        serverInfo.innerHTML = '<h3>PVP 서버 정보</h3><p>현재 운영중인 PVP 서버 목록입니다.</p>';
         pvpServers.forEach(server => {
             serverList.innerHTML += `
                 <div class="server-item">
