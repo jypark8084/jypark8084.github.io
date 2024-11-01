@@ -26,7 +26,7 @@ function showServerInfo(type) {
         pveServers.forEach(server => {
             serverList.innerHTML += `
                 <div class="server-item" onclick="location.href='${server.link || '#'}'">
-                    <h4>${server.name}</h4>
+                    <h4>${server.name}</h4><br>
                     <p>오픈 날짜: ${server.opendate}</p>
                     <p>서버 인원수: ${server.players}</p>
                     <p>카카오톡 방 인원수: ${server.kakaoplayer}</p>
@@ -38,7 +38,7 @@ function showServerInfo(type) {
             serverList.innerHTML += `
                 <div class="server-item">
                     <h4>${server.name}</h4>
-                    <p>오픈 날짜: ${server.opendate}</p>
+                    <p>오픈 날짜: ${server.opendate}</p><br>
                     <p>서버 인원수: ${server.players}</p>
                     <p>카카오톡 방 인원수: ${server.kakaoplayer}</p>
                 </div>
