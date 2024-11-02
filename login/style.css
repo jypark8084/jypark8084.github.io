@@ -126,6 +126,21 @@ footer {
     width: 100%;
         margin: 0 auto;
 }
+/* 회원가입 링크 스타일 */
+.login-container h3 {
+    text-align: right; /* 오른쪽 정렬 */
+    margin-top: 10px;
+}
+
+.login-container h3 a {
+    color: #ffffff; /* 원하는 색상 코드 */
+    text-decoration: none;
+}
+
+.login-container h3 a:hover {
+    color: #2b3de1; /* 호버 시 색상 변경 */
+}
+
 .login-container h2 {
     text-align: center;
     color: #ffffff;
