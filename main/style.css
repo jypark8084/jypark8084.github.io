@@ -62,6 +62,12 @@ nav ul li a {
     color: #e0e0e0;
 }
 
+.posts h1 {
+    text-align: center;
+    margin-bottom: 170px;
+    color: #e0e0e0;
+}
+
 button.server-btn {
     background-color: #ff4757;
     color: #fff;
