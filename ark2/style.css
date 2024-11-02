@@ -1,0 +1,106 @@
+/*style.css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    padding-left: 20px; /* 기본적인 여백 */
+    margin-bottom: 20px; /* 리스트 간격 */
+}
+
+li {
+    color: #e0e0e0; /* 텍스트 색상 */
+    margin-bottom: 10px; /* 리스트 항목 간격 */
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    background-image: url('../main/ultlmateark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffffd0;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+
+
+#about{
+padding: 50px 20px;
+background-color: #1f1f1f;
+color: #e0e0e0;
+}
+
+footer {
+background-color: #1f1f1f;
+color: #e0e0e0;
+text-align: center;
+padding: 20px;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* 전체 텍스트 크기 감소 */
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    button.server-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .server-item {
+        font-size: 14px;
+    }
+}
+
