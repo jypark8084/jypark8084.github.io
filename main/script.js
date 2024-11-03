@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const pveServers = [
     { name: "모바일아크뉴비이벤트서버", opendate: "2024-09-20", players: "20", kakaoplayer: "53", link: "../server/s1/s1.html" },
-    { name: "korea2024", opendate: "2024-05-10", players: "12", kakaoplayer: "20", link: "../server/s2/s2.html" }
+    { name: "korea2024", opendate: "2024-05-10", players: "12", kakaoplayer: "20", link: "../server/s2/s2.html" },
+    { name: "korea bongbong server", opendate: "2024-03-28", players: "12", kakaoplayer: "43", link: "../server/s3/s3.html" }
 ];
 const pvpServers = [];
 
