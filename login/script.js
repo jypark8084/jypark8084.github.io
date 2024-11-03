@@ -4,13 +4,13 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import { getFirestore, collection, addDoc, getDocs, query, where } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAG77bT0YaKUX33IrSjV3cc4N3nKdC_dY4",
-  authDomain: "testlogin-8f196.firebaseapp.com",
-  projectId: "testlogin-8f196",
-  storageBucket: "testlogin-8f196.appspot.com",
-  messagingSenderId: "844746942507",
-  appId: "1:844746942507:web:2d15058ffd6f692243626e",
-  measurementId: "G-20WL1R0QYG"
+    apiKey: "AIzaSyAG77bT0YaKUX33IrSjV3cc4N3nKdC_dY4",
+    authDomain: "testlogin-8f196.firebaseapp.com",
+    projectId: "testlogin-8f196",
+    storageBucket: "testlogin-8f196.appspot.com",
+    messagingSenderId: "844746942507",
+    appId: "1:844746942507:web:2d15058ffd6f692243626e",
+    measurementId: "G-20WL1R0QYG"
 };
 
 // Firebase 초기화
@@ -27,7 +27,7 @@ async function register() {
     try {
         // Firebase Authentication으로 이메일과 비밀번호로 사용자 생성
         await createUserWithEmailAndPassword(auth, email, password);
-        
+
         // Firestore에 사용자 정보 저장
         await addDoc(collection(db, "users"), {
             email: email,
@@ -62,9 +62,9 @@ async function login() {
 
         // Firebase Authentication으로 이메일과 비밀번호로 로그인
         await signInWithEmailAndPassword(auth, userEmail, password);
-        
+
         // 로그인 성공 시 페이지 이동
-        window.location.href = "index(1).html"; 
+        window.location.href = "index(1).html";
     } catch (error) {
         document.getElementById('loginMessage').innerText = "아이디 또는 비밀번호가 올바르지 않습니다.";
         console.error("Error:", error.message);
