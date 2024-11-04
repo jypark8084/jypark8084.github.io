@@ -6,7 +6,6 @@
     <title>모바일 아크 정보 - 회원가입</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="script.js"></script>
-
 </head>
 <body>
     <header>
@@ -25,16 +24,16 @@
         <div class="login-container">
             <h2>회원가입</h2>
             <form id="registerForm">
-                <label for="username">아이디</label>
-                <input type="text" id="username" placeholder="아이디를 입력하세요" required>
+                <label for="signupUsername">아이디</label>
+                <input type="text" id="signupUsername" placeholder="아이디를 입력하세요" required>
                 
-                <label for="useremail">이메일</label>
-                <input type="email" id="useremail" placeholder="이메일을 입력하세요" required>
+                <label for="signupEmail">이메일</label>
+                <input type="email" id="signupEmail" placeholder="이메일을 입력하세요" required>
                 
-                <label for="password">비밀번호</label>
-                <input type="password" id="password" placeholder="비밀번호를 입력하세요" required>
+                <label for="signupPassword">비밀번호</label>
+                <input type="password" id="signupPassword" placeholder="비밀번호를 입력하세요" required>
             
-                <button type="button" onclick="register()">계정 만들기</button>
+                <button type="submit" onclick="signUp()">계정 만들기</button>
             </form>
             <p id="loginMessage" class="error-message"></p>
         </div>
