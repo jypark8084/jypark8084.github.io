@@ -137,10 +137,30 @@ nav ul li a:hover::after {
     background-color: hsl(44, 75%, 50%);
 }
 
+.androidarkbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: hsl(44, 85%, 53%);
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.androidarkbutton:hover {
+    background-color: hsl(44, 75%, 50%);
+}
 
 .warning-text {
     color: #e84118;
+}
 
+.download-button2{
+    color:blue;
+    float: left;
 }
 
 
