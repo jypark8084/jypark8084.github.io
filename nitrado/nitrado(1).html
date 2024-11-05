@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Open Graph Meta Tags for Preview Image -->
+    <meta property="og:title" content="모바일 아크 정보" />
+    <meta property="og:description" content="모바일 아크 정보 사이트가 있습니다! 모르셨던 정보들을 한번 확인해보세요!" />
+    <meta property="og:image" content="main/ultlmateark.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="description" content="모바일 아크 게임 관련 정보와 이벤트를 제공하는 사이트입니다.">
+    <meta name="keywords" content="모바일 아크, 아크 서바이벌, 게임 정보, 아크 공략, 이벤트 서버">
+    <meta name="robots" content="index, follow">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 아크 정보</title>
+    <link rel="stylesheet" href="nitrado(1).css">
+</head>
+<body>
+    <header>
+        <div class="logo">모바일 아크</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="#posts">글 목록</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="login/login.html">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>최신 게임 꿀팁과 정보</h1>
+        <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
+    </section>
+    
+
+
+
+    <div class="container">
+        <button class="option-btn" onclick="showInfo('serverbackup')">니트라도 백섭 방법</button>
+        <button class="option-btn" onclick="showInfo('serversetting')">니트라도 서버 설정</button>
+        <button class="option-btn" onclick="showInfo('accountcreate')">니트라도 계정 생성 방법</button>
+        <button class="option-btn" onclick="showInfo('LegitServersetting')">LegitServer 서버 설정 방법(아이폰만 가능)</button>
+    </div>
+
+    <div id="info-box" style="display: none;">
+        <h2 id="info-title"></h2>
+        <div id="info-content"></div>
+    </div>
+    
+
+
+
+    
+    <script>
+        function showInfo(type) {
+            var title = document.getElementById('info-title');
+            var content = document.getElementById('info-content');
+            var infoBox = document.getElementById('info-box');
+
+            if (type === 'serverbackup') {
+                title.textContent = '니트라도 백섭 방법';
+                content.innerHTML = `
+                    <div class="nitradobutton-container">
+                        <a href="https://server.nitrado.net/en-GB" class="nitradobutton">니트라도로 바로 가기</a>
+                    </div>
+                    <div class="serverbackup">
+                    <h3>서버 백섭 방법입니다</h3>
+                    <img src="serverbackupimage/serverbackupimage1.png" alt="니트라도 계정 생성 방법 이미지 설명2" width="450" height="250"><br>
+                    <h3>먼저 이렇게 니트라도 서버가 보이는 창에 가서 "web interface" 에 들어가 줍니다 
+                    
+
+                    <br><img src="serverbackupimage/serverbackupimage2.png" alt="니트라도 계정 생성 방법 이미지 설명2" width="450" height="250"><br>
+                    <h3>이렇게 보일건데 왼쪽창에 있는 tools 에서 restore backup을 눌러줍니다.</h3>
+
+
+                    <img src="serverbackupimage/serverbackupimage3.png" alt="니트라도 계정 생성 방법 이미지 설명2" width="300" height="250"><br>
+                    <h3>그럼 이렇게 보일건데 가장 위에 있는 server backups칸안에 있는 그것만 가능 합니다 
+                    현재 보이시는 날짜들이 AM은 오전입니다<br></h3>
+                    <h2 class="warning-text">!주의!</h2>
+                    <h3 class="warning-text">백섭이 시작이 된다면 다음 백섭이 진행되기까지 약 24시간 동안 백섭 기능을 이용 못합니다. 그리고 백섭을 진행하기 전에 가끔 버그로 인해 씹히는 경우가 종종 있습니다. 그러니 서버를 닫고 백섭을 진행하시면 덜 씹힙니다. 주의하시길 바랍니다.</h3>
+                    </div>
+                `;
+            } else if (type === 'serversetting') {
+                title.textContent = '니트라도 서버 설정 방법';
+                content.innerHTML = `
+                    <div class="nitradobutton-container">
+                        <a href="https://server.nitrado.net/en-GB" class="nitradobutton">니트라도로 바로 가기</a>
+                    </div>
+                `;
+            }
+            else if (type === 'accountcreate') {
+                title.textContent = '니트라도 계정 생성 방법';
+                content.innerHTML = `
+                    <div class="nitradobutton-container">
+                        <a href="https://server.nitrado.net/en-GB" class="nitradobutton">니트라도로 바로 가기</a>
+                    </div>
+                    <div class="accountcreatecenter">
+                        <h3>니트라도 계정을 생성하는 데 필요 한것은 이메일 뿐 입니다</<h2><br><br>
+                        <div class="accountcreatecenter1">
+                            <img src="accountcreateimage/accountcreateimage1.png" alt="니트라도 계정 생성 방법 이미지 설명1" width="500" height="250"><br> 
+                        <div>
+                        <h3>먼저 니트라도 사이트에 들어가시면 이렇게 뜰건데<br>맨 위 오른쪽에 "LOG IN" 이라고 적혀 있는 곳에 클릭을 하십쇼 <br><br>
+                        <img src="accountcreateimage/accountcreateimage2.png" alt="니트라도 계정 생성 방법 이미지 설명2" width="300" height="250"><br>
+                        <h3>하셨으면 이렇게 로그인 창이 뜰건데 "Register"이라고 적혀 있는 버튼을 클릭을 하시면</h3>
+                        <br><br><img src="accountcreateimage/accountcreateimage3.png" alt="니트라도 계정 생성 방법 이미지 설명3" width="300" height="250"><br>
+                        <h3>사진에 보이는 창이 뜰거에요 그럼 맨위부터 사용자닉네임,그 계정의 쓸 이메일,그리고 계정, 비밀번호까지 적으시면 됩니다.
+                        <br><br><img src="accountcreateimage/accountcreateimage4.png" alt="니트라도 계정 생성 방법 이미지 설명4" width="300" height="250"><br>
+                        이렇게 저처럼 다 적으시고 맨 밑에 있는 확인 체크박스를 클릭을 하시고 "Register" 버튼을 클릭을 하시면 계정이 생성이 됩니다
+                        <br><br><img src="accountcreateimage/accountcreateimage5.png" alt="니트라도 계정 생성 방법 이미지 설명5" width="300" height="250"><br>
+                        이렇게 저처럼 계정 생성이 다 되신 거에요
+                    </div>
+                
+                
+                `;
+            }
+            else if (type === 'LegitServersetting') {
+                title.textContent = 'Legit서버 설정 방법';
+                content.innerHTML = `
+                    <div class="nitradobutton-container">
+                        <a href="https://server.nitrado.net/en-GB" class="nitradobutton">니트라도로 바로 가기</a>
+                    </div>
+                
+                
+                
+                `;
+            }
+
+            infoBox.style.display = 'block';
+        }
+    </script>
+<!--    <section id="about">
+        <h2>사이트 소개</hW2>
+        <p>이 블로그는 게임 관련 정보를 공유하고, 게임에서 성공하기 위한 팁과 전략을 제공합니다...</p>
+    </section>
+-->
+
+    <footer>
+        <p>&copy; 대리인. 모든 권리와 저작권 보유..</p>
+    </footer>
+</body>
+</html>
