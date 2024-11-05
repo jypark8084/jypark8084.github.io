@@ -1,0 +1,180 @@
+/*style.css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    background-image: url('../main/ultlmateark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffffd0;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+
+
+#about{
+padding: 50px 20px;
+background-color: #1f1f1f;
+color: #e0e0e0;
+}
+
+footer {
+background-color: #1f1f1f;
+color: #e0e0e0;
+text-align: center;
+padding: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative; /* 밑줄을 애니메이션 효과로 처리하기 위해 position 추가 */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffd744; /* 밑줄 색상을 흰색으로 설정 */
+    left: 0;
+    bottom: -5px; /* 텍스트와 밑줄 간격 */
+    transition: width 0.3s ease; /* 밑줄이 나타나는 애니메이션 */
+    font-weight: 600; /* 글자 굵기 증가 */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* 마우스 호버 시 밑줄의 길이를 100%로 변경 */
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.option-btn {
+    width: 45%;
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: hsl(44, 85%, 53%);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+/* 마우스 호버시 색상 변경 */
+.option-btn:hover {
+    background-color: #e1e721;
+}
+
+.nitradobutton-container {
+    text-align: right;
+    margin-bottom: 20px; /* 필요에 따라 간격 조절 */
+}
+
+.nitradobutton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: hsl(44, 85%, 53%);
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.nitradobutton:hover {
+    background-color: hsl(44, 75%, 50%);
+}
+
+
+.warning-text {
+    color: #e84118;
+
+}
+
+
+@media (max-width: 600px) {
+    .option-btn {
+        width: 100%;
+    }
+    body {
+        font-size: 14px; /* 전체 텍스트 크기 감소 */
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    button.server-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .server-item {
+        font-size: 14px;
+    }
+}
+
