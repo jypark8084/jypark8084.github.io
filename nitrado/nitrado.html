@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- Open Graph Meta Tags for Preview Image -->
+    <meta property="og:title" content="모바일 아크 정보" />
+    <meta property="og:description" content="모바일 아크 정보 사이트가 있습니다! 모르셨던 정보들을 한번 확인해보세요!" />
+    <meta property="og:image" content="main/ultlmateark.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="description" content="모바일 아크 게임 관련 정보와 이벤트를 제공하는 사이트입니다.">
+    <meta name="keywords" content="모바일 아크, 아크 서바이벌, 게임 정보, 아크 공략, 이벤트 서버">
+    <meta name="robots" content="index, follow">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게임 정보 허브</title>
+    <title>모바일 아크 정보</title>
     <link rel="stylesheet" href="nitrado.css">
 </head>
 <body>
-
     <header>
-        <h1>게임 정보 허브</h1>
+        <div class="logo">모바일 아크</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="#posts">글 목록</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="login/login.html">로그인</a></li>
+            </ul>
+        </nav>
     </header>
+    
+    <section id="home" class="hero">
+        <h1>최신 게임 꿀팁과 정보</h1>
+        <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
+    </section>
+    
 
-    <nav>
-        <a href="../main/subindex.html">서버 목록</a>
-        <a href="#">서버 니트라도</a>
-        <a href="#">공룡</a>
-        <a href="#">조합법</a>
-    </nav>
+
 
     <div class="container">
         <button class="option-btn" onclick="showInfo('serverbackup')">니트라도 백섭 방법</button>
@@ -26,15 +43,15 @@
         <button class="option-btn" onclick="showInfo('LegitServersetting')">LegitServer 서버 설정 방법(아이폰만 가능)</button>
     </div>
 
-    <div id="info-box" style="display:none;">
-        <h3 id="info-title"></h3>
-        <p id="info-content"></p>
+    <div id="info-box" style="display: none;">
+        <h2 id="info-title"></h2>
+        <div id="info-content"></div>
     </div>
+    
 
-    <footer>
-        <p>&copy; 2024 게임 정보 허브. 모든 권리 보유.</p>
-    </footer>
 
+
+    
     <script>
         function showInfo(type) {
             var title = document.getElementById('info-title');
@@ -112,6 +129,14 @@
             infoBox.style.display = 'block';
         }
     </script>
+<!--    <section id="about">
+        <h2>사이트 소개</hW2>
+        <p>이 블로그는 게임 관련 정보를 공유하고, 게임에서 성공하기 위한 팁과 전략을 제공합니다...</p>
+    </section>
+-->
 
+    <footer>
+        <p>&copy; 대리인. 모든 권리와 저작권 보유..</p>
+    </footer>
 </body>
 </html>
