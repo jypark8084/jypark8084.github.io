@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta property="og:title" content="korea bongbong server" />
+    <meta property="og:description" content="현재 이서버에 관련해서 알아보세요!" />
+    <meta property="og:image" content="../serverimage/s4.png" />
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 정보 허브</title>
+    <link rel="stylesheet" href="server.css">
+</head>
+<body>
+    <header>
+        <div class="logo">모바일 아크</div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">홈</a></li>
+                <li><a href="#posts">글 목록</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="../../login/login.html">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>최신 게임 꿀팁과 정보</h1>
+        <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
+    </section>
+
+    <div class="container">
+        <section class="news">
+            <h2>KOREA 365 (비공식 / PVE) 아크모바일</h2>
+            <img src="../serverimage/s4.jpg" alt="KOREA 365 (비공식 / PVE) 아크모바일 이미지" width="300" height="150">
+            <article id="server-info">
+                <h3>서버 인원: <br> 
+                카톡방 인원: <br>
+                어드민: 
+                </h3>
+                
+                <!-- 공지 클릭 버튼 -->
+                <p class="toggle-button" onclick="toggleContent()">[공지]</p>
+                
+                <!-- 공지 숨겨진 내용 -->
+                <div id="hidden-content">
+                    <section class="server-info">
+                        <!--공지 상황 말-->
+                    </section>
+                </div>
+        <h4><br>
+            <!--개발자 말-->
+        </h4><br>
+        <a href="https://open.kakao.com/o/gX1sBe4e" target="_blank">
+        <img src="../카카오톡.png" alt="카카오톡 이미지" width="50" height="50">
+    </div>
+
+    <script>
+        function toggleContent() {
+            var content = document.getElementById('hidden-content');
+            content.classList.toggle('visible'); // 클래스를 토글하여 숨기거나 보여줍니다.
+        }
+    </script>
+
+</body>
+</html>
