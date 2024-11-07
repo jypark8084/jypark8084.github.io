@@ -5,5 +5,3 @@
 2. 공룡 틀 정도는 완성이 되야 할것
 3. 조합법 완성 되야 해야 할것
 4. 공룡 이미지 찾기 
-sadjiowdhuwhduhk123 131323
-41r3qfejh3rui24t5hyrdwqadadsdaswqd
