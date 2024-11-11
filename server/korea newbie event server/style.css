@@ -111,6 +111,33 @@ nav ul li a:hover::after {
     transition: background-color 0.3s ease;
 }
 
+
+.toggle-button {
+    display: inline-block;
+    background-color: #ff4757;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+/* 공지 버튼 호버 효과 */
+.toggle-button:hover {
+    background-color: #ff6b81;
+    transform: translateY(-5px);
+}
+
+/* 공지 버튼 클릭 효과 */
+.toggle-button:active {
+    transform: scale(0.95);
+    background-color: #e84118;
+}
 /* 마우스 호버시 색상 변경 */
 .option-btn:hover {
     background-color: #e1e721;
