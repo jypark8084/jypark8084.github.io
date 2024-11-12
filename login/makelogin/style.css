@@ -33,6 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-size: 2vw; /* 화면 크기에 비례하여 텍스트 크기 조정 */
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
@@ -145,6 +146,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+    nav ul li a {
+        font-size: 5vw; /* 작은 화면에서 더 작은 폰트 크기 */
+    }
     body {
         font-size: 14px;
     }
@@ -159,5 +163,13 @@ footer {
 
     .login-container {
         padding: 20px;
+    }
+}
+
+
+/* 더 작은 화면에서는 텍스트 크기 줄이기 */
+@media (max-width: 400px) {
+    nav ul li a {
+        font-size: 6vw; /* 더 작은 화면에서 폰트 크기를 더욱 줄임 */
     }
 }
