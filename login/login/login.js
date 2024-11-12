@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Firebase Authentication으로 로그인 시도
             await signInWithEmailAndPassword(auth, emailToLogin, password);
             alert("로그인 성공!");
-            window.location.href = "../index.html"; // 로그인 후 리다이렉트
+            window.location.href = "../../index.html"; // 로그인 후 리다이렉트
         } catch (error) {
             loginMessageElement.innerText = "아이디 또는 비밀번호가 올바르지 않습니다.";
             console.error("로그인 오류:", error.message);
