@@ -314,6 +314,28 @@ nav ul li a:hover::after {
 
 
 
+.channel-section {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    gap: 20px; /* 각 버튼 간 간격 */
+    margin: 30px 0; /* 위아래 여백 */
+}
+
+.channel-link {
+    display: inline-block;
+    padding: 10px 400px;
+    background-color: #ffd744;
+    color: #1f1f1f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.channel-link:hover {
+    background-color: #ffc107; /* 호버 시 밝은 노란색 */
+}
 
 
 
