@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모바일 아크 정보</title>
     <link rel="stylesheet" href="main/style.css">
-    <script type="module" src="scripts/firebase-init.js"></script>  <!-- Firebase 초기화 -->
-    <script type="module" src="scripts/auth.js"></script>  <!-- 인증 상태 체크 -->
+    <script type="module" src="scripts/firebase-init.js"></script>
+    <script type="module" src="scripts/auth.js"></script>
 </head>
 <body>
     <header>
@@ -26,16 +26,38 @@
     </header>
 
     <section id="home" class="hero">
-        <h1>최신 게임 꿀팁과 정보</h1>
-        <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
+        <h1>모바일 아크에 오신 것을 환영합니다</h1>
+        <p>최신 게임 팁과 정보를 한 곳에서 확인하세요!</p>
+        <a href="#posts" class="cta-button">정보 확인하기</a>
+    </section>
+
+    <section id="features" class="features">
+        <h2>주요 특징</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <img src="main/feature1.jpg" alt="게임 정보">
+                <h3>게임 정보</h3>
+                <p>모바일 아크의 최신 업데이트와 정보를 제공합니다.</p>
+            </div>
+            <div class="feature-item">
+                <img src="main/feature2.jpg" alt="서버 정보">
+                <h3>서버 정보</h3>
+                <p>현재 운영 중인 서버의 상태와 접속 정보를 확인하세요.</p>
+            </div>
+            <div class="feature-item">
+                <img src="main/feature3.jpg" alt="꿀팁">
+                <h3>게임 꿀팁</h3>
+                <p>초보자를 위한 유용한 꿀팁과 공략을 만나보세요.</p>
+            </div>
+        </div>
     </section>
 
     <section id="posts" class="posts">
         <h2>목록</h2>
         <div class="post-list123">
             <article class="post-item" onclick="window.location.href='uark/uark list.html'">
-                <h3> Ultmate 아크 정보</h3>
-                <p>출실일, 아일랜드는 무료...</p>
+                <h3>Ultmate 아크 정보</h3>
+                <p>출시일, 아일랜드는 무료...</p>
                 <a href="#" class="read-more">자세히 보기</a>
             </article>
             <article class="post-item" onclick="window.location.href='main/subindex.html'">
@@ -43,31 +65,11 @@
                 <p>현재 운영중인 서버들을 알려드립니다.</p>
                 <a href="main/subindex.html" class="read-more">자세히 보기</a>
             </article>
-            <article class="post-item" onclick="window.location.href='../nitrado/nitrado.html'">
-                <h3>니트라도</h3>
-                <p>니트라도에 대한 정보들이나 방법들을 알려줍니다.</p>
-                <a href="#" class="read-more">자세히 보기</a>
-            </article>
-            <article class="post-item" onclick="window.location.href='installark/install.html'">
-                <h3>모바일 아크 설치 방법</h3>
-                <p>안드로이드, 아이폰 아크 설치 방법을 알려드립니다.</p>
-                <a href="#" class="read-more">자세히 보기</a>
-            </article>
-            <article class="post-item" onclick="window.location.href='#'">
-                <h3>게임 동굴 정보</h3>
-                <p>게임 안에서의 동굴들에 대한 꿀팁 및 정보를 소개드립니다.</p>
-                <a href="#" class="read-more">자세히 보기</a>
-            </article>
-            <article class="post-item" onclick="window.location.href='#'">
-                <h3>게임 공룡 정보</h3>
-                <p>초보자들을 위한 필수 공룡 가이드...</p>
-                <a href="#" class="read-more">자세히 보기</a>
-            </article>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 대리인. 모든 권리와 저작권 보유..</p>
+        <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
     </footer>
 </body>
 </html>
