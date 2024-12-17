@@ -21,9 +21,29 @@
                 <li><a href="#posts">글 목록</a></li>
                 <li><a href="/Introduction/About.html">소개</a></li>
                 <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
+                <!-- 햄버거 아이콘 추가 -->
+                <li>
+                    <div class="hamburger" id="menuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <!-- 사이드 메뉴 -->
+    <aside class="sidebar" id="sidebarMenu">
+        <div class="close-btn" id="closeBtn">&times;</div>
+        <h2>추가 메뉴</h2>
+        <ul>
+            <li><a href="#new-info">최신 소식</a></li>
+            <li><a href="#event">이벤트</a></li>
+            <li><a href="#guides">공략 모음</a></li>
+            <li><a href="#community">커뮤니티</a></li>
+        </ul>
+    </aside>
 
     <section id="home" class="hero">
         <h1>모바일 아크에 오신 것을 환영합니다</h1>
@@ -71,5 +91,19 @@
     <footer>
         <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const sidebarMenu = document.getElementById('sidebarMenu');
+        const closeBtn = document.getElementById('closeBtn');
+
+        menuBtn.addEventListener('click', () => {
+            sidebarMenu.classList.toggle('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebarMenu.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
