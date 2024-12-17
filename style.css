@@ -424,18 +424,35 @@ nav ul li a:hover::after {
 }
 
 /* 스크롤 애니메이션 */
+/* 기본적으로 숨김 상태 */
 .hidden {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* 화면에 보일 때 */
 .visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+
 .centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
+/* content-section 공통 스타일 */
+.content-section {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-section img {
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
@@ -443,6 +460,78 @@ nav ul li a:hover::after {
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
+}
+
+/* 중요 정보 섹션 스타일 */
+.important-info {
+    background-color: #ffcc00; /* 눈에 띄는 배경색 */
+    color: #000;
+    padding: 20px;
+    margin-bottom: 20px; /* 다른 섹션과 간격 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.important-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.important-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.important-info ul li {
+    margin-bottom: 10px;
+}
+
+/* 최신 업데이트 정보 섹션 스타일 */
+.updates {
+    background-color: #2a2a2a;
+    color: #ffd744;
+    padding: 20px;
+    margin: 20px 0; /* 위아래 간격 추가 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.updates h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffd744;
+}
+
+.updates ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.updates ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.updates ul li:last-child {
+    border-bottom: none; /* 마지막 항목에 밑줄 제거 */
+}
+
+.updates ul li a {
+    color: #ffd744;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.updates ul li a:hover {
+    color: #ffffff; /* 마우스 오버 시 색상 변경 */
+    text-decoration: underline; /* 강조 */
 }
 
 
