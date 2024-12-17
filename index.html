@@ -69,43 +69,29 @@
         <a href="#posts" class="cta-button">정보 확인하기</a>
     </section>
 
-    <section id="features" class="features">
-        <h2>주요 특징</h2>
-        <div class="feature-list">
-            <div class="feature-item">
-                <img src="main/feature1.jpg" alt="게임 정보">
-                <h3>게임 정보</h3>
-                <p>모바일 아크의 최신 업데이트와 정보를 제공합니다.</p>
-            </div>
-            <div class="feature-item">
-                <img src="main/feature2.jpg" alt="서버 정보">
-                <h3>서버 정보</h3>
-                <p>현재 운영 중인 서버의 상태와 접속 정보를 확인하세요.</p>
-            </div>
-            <div class="feature-item">
-                <img src="main/feature3.jpg" alt="꿀팁">
-                <h3>게임 꿀팁</h3>
-                <p>초보자를 위한 유용한 꿀팁과 공략을 만나보세요.</p>
-            </div>
-        </div>
-    </section>
-
     <section id="posts" class="posts">
-        <h2>목록</h2>
         <div class="post-list123">
-            <article class="post-item" onclick="window.location.href='uark/uark list.html'">
-                <h3>Ultmate 아크 정보</h3>
-                <p>출시일, 아일랜드는 무료...</p>
-                <a href="#" class="read-more">자세히 보기</a>
-            </article>
-            <article class="post-item" onclick="window.location.href='main/subindex.html'">
-                <h3>게임 서버 정보</h3>
-                <p>현재 운영중인 서버들을 알려드립니다.</p>
-                <a href="main/subindex.html" class="read-more">자세히 보기</a>
-            </article>
+            <section id="introduction" class="content-section hidden">
+                <h2>사이트 소개</h2>
+                <img src="../main/대리인.png" alt="" width="250" height="250" class="centered-image">
+                <h2>지금까지 서버만 2년 연구하고 관리한 대리인이 아는 모든 꿀팁과 정보들을 공유하는 사이트 입니다!</h2>
+            </section>
+            
+            <section id="introduction" class="content-section hidden">
+                <img src="Introduction/About.png" alt="" width="400" height="400" class="centered-image">
+                <h2>다양한 정보들과 여러가지 현재까지 나온 꿀팁들을 모두 작성을 해뒀습니다!</h2>
+            </section>
+
+            <section id="features" class="content-section hidden">
+                <div class="review">
+                <h2>후기</h2>
+                    <img src="/Introduction/후기(1).png" alt="" width="300" height="150" class="centered-image">
+                    <h1><strong>디힣: </strong>"사이트 잘만들었넼ㅋㅋㅋ 대리인 작품인가"</h1>
+                </div>
+            </section>
+    
         </div>
     </section>
-
     <footer>
         <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
     </footer>
@@ -122,6 +108,20 @@
         closeBtn.addEventListener('click', () => {
             sidebarMenu.classList.remove('active');
         });
+        // 스크롤 시 섹션이 나타나도록 설정
+        document.addEventListener("scroll", function() {
+            const sections = document.querySelectorAll(".content-section");
+            const scrollPos = window.innerHeight / 1.2;
+
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                if (sectionTop < scrollPos) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+
     </script>
 </body>
 </html>

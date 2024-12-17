@@ -423,6 +423,28 @@ nav ul li a:hover::after {
     margin-bottom: 20px;
 }
 
+/* 스크롤 애니메이션 */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
 
 
 @media (max-width: 600px) {
