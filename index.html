@@ -8,29 +8,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모바일 아크 정보</title>
-    <link rel="stylesheet" href="main/style.css">
+    <link rel="stylesheet" href="style.css">
     <script type="module" src="scripts/firebase-init.js"></script>
     <script type="module" src="scripts/auth.js"></script>
+    <style>
+        /* 추가 스타일 (필요 시) */
+        .nav-login-hamburger {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-login-hamburger nav ul {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        /* nav 안에 로그인 링크만 있으므로 불필요한 여백은 최소화 */
+        .nav-login-hamburger nav ul li {
+            margin: 0;
+        }
+        
+        .nav-login-hamburger .hamburger {
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">모바일 아크</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">홈</a></li>
-                <li><a href="#posts">글 목록</a></li>
-                <li><a href="/Introduction/About.html">소개</a></li>
-                <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
-                <!-- 햄버거 아이콘 추가 -->
-                <li>
-                    <div class="hamburger" id="menuBtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <div class="nav-login-hamburger">
+            <nav>
+                <ul>
+                    <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
+                </ul>
+            </nav>
+            <!-- nav 바깥에 햄버거 메뉴 추가 -->
+            <div class="hamburger" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
     <!-- 사이드 메뉴 -->
