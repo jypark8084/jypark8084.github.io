@@ -9,7 +9,8 @@
     <meta name="description" content="모바일 아크 게임 관련 정보와 이벤트를 제공하는 사이트입니다.">
     <meta name="keywords" content="모바일 아크, 아크 서바이벌, 게임 정보, 아크 공략, 이벤트 서버">
     <meta name="robots" content="index, follow">
-    
+    <script type="module" src="scripts/auth.js"></script>
+    <script type="module" src="scripts/sudebarMenu.js"></script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +20,19 @@
 <body>
     <header>
         <div class="logo">모바일 아크</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">홈</a></li>
-                <li><a href="#posts">글 목록</a></li>
-                <li><a href="#about">소개</a></li>
-                <li><a href="login/login.html">로그인</a></li>
-            </ul>
-        </nav>
+        <div class="nav-login-hamburger">
+            <nav>
+                <ul>
+                    <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
+                </ul>
+            </nav>
+            <!-- nav 바깥에 햄버거 메뉴 추가 -->
+            <div class="hamburger" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
     <section id="home" class="hero">

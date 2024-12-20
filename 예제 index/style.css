@@ -1,0 +1,265 @@
+/*style.css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* nav 아래로 햄버거를 위치시키기 위해 flex-direction: column;을 고려할 수도 있으나
+       현재 구조에서는 필요 없음 */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+.hero {
+    background-image: url('ultlmateark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffffd0;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+
+#about{
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative; /* 밑줄을 애니메이션 효과로 처리하기 위해 position 추가 */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffd744; 
+    left: 0;
+    bottom: -5px; 
+    transition: width 0.3s ease; 
+    font-weight: 600; 
+}
+
+nav ul li a:hover::after {
+    width: 100%; 
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('main/ultlmateark.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4757;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e84118;
+}
+
+
+/* 햄버거 아이콘 스타일 */
+.hamburger {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* 처음에 화면 밖에 위치 */
+    width: 250px;
+    height: 100%;
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 999; /* 상단에 위치하게 */
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* 사이드바 닫기 버튼 스타일 */
+.close-btn {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+
+
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
+/* content-section 공통 스타일 */
+.content-section {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+        /* 추가 스타일 (필요 시) */
+        .nav-login-hamburger {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-login-hamburger nav ul {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        /* nav 안에 로그인 링크만 있으므로 불필요한 여백은 최소화 */
+        .nav-login-hamburger nav ul li {
+            margin: 0;
+        }
+        
+        .nav-login-hamburger .hamburger {
+            margin-left: 10px;
+        }
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* 전체 텍스트 크기 감소 */
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+}

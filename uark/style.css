@@ -204,6 +204,125 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* 햄버거 아이콘 스타일 */
+.hamburger {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+
+.nav-login-hamburger .hamburger {
+    margin-left: 10px;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* 기본적으로 화면 밖에 위치 */
+    width: 250px;
+    height: 100%;
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* 애니메이션 효과 추가 */
+    display: flex;
+    flex-direction: column;
+    z-index: 999; /* 다른 요소 위에 표시 */
+}
+
+.sidebar.active {
+    right: 0; /* 활성화 시 화면 안으로 들어옴 */
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #ffd744;
+    text-decoration: underline;
+}
+
+/* 사이드바 닫기 버튼 스타일 */
+.close-btn {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ffd744;
+}
+
+        /* 추가 스타일 (필요 시) */
+        .nav-login-hamburger {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-login-hamburger nav ul {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        /* nav 안에 로그인 링크만 있으므로 불필요한 여백은 최소화 */
+        .nav-login-hamburger nav ul li {
+            margin: 0;
+        }
+        
+        .nav-login-hamburger .hamburger {
+            margin-left: 10px;
+        }
+
+
+/* 사이드바 닫기 버튼 스타일 */
+.close-btn {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
 /* 반응형 */
 @media (max-width: 600px) {
     body {

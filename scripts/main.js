@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 업데이트 목록 추가
     const updates = [
-        { title: "아크 출시일 미루어졌습니다...", link: "/uark/uark6/ark.html" },
+        { title: "아크 출시일 기간 연장 소식", link: "/uark/uark6/ark.html" },
         { title: "현재 아크 사이트를 대규모로...", link: "/updates/event-update.html" },
-    //{ title: "크리스마스 특집 업데이트 공개", link: "/updates/event-update.html" },
+    //{ title: "제목", link: ".html" },
     ];
 
     const updatesSection = document.querySelector(".updates ul");
