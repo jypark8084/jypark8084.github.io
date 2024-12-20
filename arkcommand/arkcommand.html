@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">모바일 아크</div>
+        <div class="logo" id="logo">모바일 아크</div>
         <div class="nav-login-hamburger">
             <nav>
                 <ul>
@@ -38,9 +38,9 @@
         <h2>목록</h2>
         <ul>
             <li><a href="/uark/">아크 얼티메이트 소식</a></li>
-            <li><a href="#event">비공식 서버</a></li>
-            <li><a href="#community">아크 명령어</a></li>
-            <li><a href="#guides">니트라도</a></li>
+            <li><a href="/main/subindex.html">비공식 서버</a></li>
+            <li><a href="/arkcommand/arkcommand.html">아크 명령어</a></li>
+            <li><a href="/nitrado/nitrado.html">니트라도</a></li>
             <li><a href="#community">후원자</a></li>
         </ul>
     </aside>
@@ -49,6 +49,29 @@
         <h1>최신 게임 꿀팁과 정보</h1>
         <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
     </section>
+
+
+    <section id="command-collection">
+        <h2>모바일 아크 명령어 모음집</h2>
+        <!-- 검색창 -->
+        <input type="text" id="commandSearch" placeholder="명령어 검색" />
+        <!-- 명령어 리스트 -->
+        <div id="commandList" class="command-list"></div>
+    </section>
+    
+    <script src="/scripts/commands.js"></script>
+    
+    
+    
+
+
+
+
+
+
+
+
+
 
     
     <script src="scripts/main.js"></script>
