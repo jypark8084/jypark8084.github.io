@@ -306,14 +306,31 @@ img {
             word-wrap: break-word; /* 긴 줄은 자동 줄바꿈 */
             overflow: hidden; /* 넘어간 내용은 숨김 */
         }
-        
 
-
-
-
-
-
-
+        .toast {
+            visibility: hidden;
+            min-width: 250px;
+            margin: 0 auto;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 15px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: visibility 0s, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+    
+        .toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
 
 
 
