@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 업데이트 목록 추가
     const updates = [
+        { title: "아크 명령어 전체적으로 수정중...", link: "/uark/uark6/ark.html" },
         { title: "아크 출시일 기간 연장 소식", link: "/uark/uark6/ark.html" },
         { title: "현재 아크 사이트를 대규모로...", link: "/updates/event-update.html" },
     //{ title: "제목", link: ".html" },
