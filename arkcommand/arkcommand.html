@@ -12,7 +12,6 @@
     <script type="module" src="/scripts/firebase-init.js"></script>
     <script type="module" src="/scripts/auth.js"></script>
     <script type="module" src="/scripts/sudebarMenu.js"></script>
-
 </head>
 <body>
     <header>
@@ -23,7 +22,6 @@
                     <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
                 </ul>
             </nav>
-            <!-- nav 바깥에 햄버거 메뉴 추가 -->
             <div class="hamburger" id="menuBtn">
                 <span></span>
                 <span></span>
@@ -50,31 +48,21 @@
         <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
     </section>
 
+
     <div id="toast" class="toast"></div>
     <section id="command-collection">
         <h2>모바일 아크 명령어 모음집</h2>
-        <!-- 검색창 -->
+        <div id="tags" class="tags">
+            <button class="tag-btn" data-tag="생물">생물</button>
+            <button class="tag-btn" data-tag="물건">물건</button>
+            <button class="tag-btn" data-tag="기타">기타</button>
+        </div>
         <input type="text" id="commandSearch" placeholder="명령어 검색" />
-        <!-- 명령어 리스트 -->
         <div id="commandList" class="command-list"></div>
     </section>
     
-    <script src="/scripts/commands.js"></script>
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-    
-    <script src="scripts/main.js"></script>
+    <script type="module" src="/scripts/commands.js"></script>
+    <script type="module" src="/scripts/main.js"></script>
     <footer>
         <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
     </footer>

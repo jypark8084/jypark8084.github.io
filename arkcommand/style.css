@@ -331,7 +331,33 @@ img {
             visibility: visible;
             opacity: 1;
         }
-
+        #tags {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+        
+        .tag-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2b2b2b;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .tag-btn:hover {
+            background-color: #ffd744;
+            color: #000;
+        }
+        
+        .tag-btn.active {
+            background-color: #ffd744;
+            color: #000;
+        }
+        
 
 
 
