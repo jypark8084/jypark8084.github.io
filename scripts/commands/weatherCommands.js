@@ -21,4 +21,4 @@ const  weatherCommands= [
 ];
 
 
-export default dinoCommands;
+export default weatherCommands;

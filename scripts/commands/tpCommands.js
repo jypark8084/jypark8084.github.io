@@ -23,4 +23,4 @@ const  tpCommands= [
     ];
     
     
-    export default dinoCommands;
+    export default tpCommands;

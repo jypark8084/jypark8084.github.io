@@ -1,12 +1,20 @@
 import dinoCommands from './commands/dinoCommands.js';
 import BossCommands from './commands/BossCommands.js';
 import itemCommands from './commands/itemCommands.js';
+import artifactCommands from './commands/artifactCommands.js';
+import generalCommands from './commands/generalCommands.js';
+import tpCommands from './commands/tpCommands.js';
+import weatherCommands from './commands/weatherCommands.js';
 
 // 명령어 데이터
 const commands = [
     ...dinoCommands,
     ...BossCommands,
     ...itemCommands,
+    ...artifactCommands,
+    ...generalCommands,
+    ...tpCommands,
+    ...weatherCommands,
 ];
 
 export default commands;
@@ -29,6 +37,11 @@ function renderCommands(filterTag = "", searchQuery = "") {
     });
 
     commandList.innerHTML = ""; // 기존 내용 초기화
+    if (filteredCommands.length === 0) {
+        commandList.innerHTML = "<p>해당 조건에 맞는 명령어가 없습니다.</p>";
+        return;
+    }
+
     filteredCommands.forEach(command => {
         const commandItem = document.createElement("div");
         commandItem.classList.add("command-item");
@@ -43,11 +56,6 @@ function renderCommands(filterTag = "", searchQuery = "") {
         commandItem.addEventListener("click", () => copyCommand(command.code));
         commandList.appendChild(commandItem);
     });
-
-    // 필터 적용 후에도 리스트가 비어 있다면 메시지를 표시
-    if (filteredCommands.length === 0) {
-        commandList.innerHTML = "<p>해당 조건에 맞는 명령어가 없습니다.</p>";
-    }
 }
 
 // 명령어 복사 기능

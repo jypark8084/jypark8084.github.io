@@ -53,9 +53,24 @@
     <section id="command-collection">
         <h2>모바일 아크 명령어 모음집</h2>
         <div id="tags" class="tags">
-            <button class="tag-btn" data-tag="생물">생물</button>
-            <button class="tag-btn" data-tag="물건">물건</button>
+            <button class="tag-btn" data-tag="공룡">생물</button>
+            <button class="tag-btn" data-tag="무기">무기</button>
+            <button class="tag-btn" data-tag="장비">장비</button>
+            <button class="tag-btn" data-tag="테크">테크</button>
+            <button class="tag-btn" data-tag="사료">사료</button>
+            <button class="tag-btn" data-tag="건축물">건축물</button>
             <button class="tag-btn" data-tag="기타">기타</button>
+        
+            <!-- 드롭다운 메뉴 -->
+            <div class="dropdown">
+                <button class="dropdown-btn">맵 선택</button>
+                <div class="dropdown-menu">
+                    <button class="tag-btn" data-tag="아일랜드">아일랜드</button>
+                    <button class="tag-btn" data-tag="에버레이션">에버레이션</button>
+                    <button class="tag-btn" data-tag="스코치드 어스">스코치드 어스</button>
+                    <button class="tag-btn" data-tag="라그나로크">라그나로크</button>
+                </div>
+            </div>
         </div>
         <input type="text" id="commandSearch" placeholder="명령어 검색" />
         <div id="commandList" class="command-list"></div>

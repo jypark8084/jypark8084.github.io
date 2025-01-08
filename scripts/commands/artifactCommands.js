@@ -23,4 +23,4 @@ const  artifactCommands= [
 ];
 
 
-export default dinoCommands;
+export default artifactCommands;

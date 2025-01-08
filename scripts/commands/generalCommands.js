@@ -66,4 +66,4 @@ const  generalCommands= [
 ];
 
 
-export default dinoCommands;
+export default generalCommands;
