@@ -331,21 +331,28 @@ img {
             visibility: visible;
             opacity: 1;
         }
+
+
+
+
+        
         #tags {
             display: flex;
-            justify-content: center;
-            margin-bottom: 15px;
-            gap: 10px;
+            flex-wrap: wrap; /* 줄바꿈 허용 */
+            gap: 10px; /* 버튼 간격 */
+            justify-content: center; /* 가운데 정렬 */
+            margin-bottom: 15px; /* 아래 간격 */
         }
         
         .tag-btn {
-            padding: 10px 20px;
+            padding: 10px 15px;
             border: none;
             border-radius: 5px;
             background-color: #2b2b2b;
             color: #e0e0e0;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            flex-shrink: 0; /* 버튼 크기를 유지 */
         }
         
         .tag-btn:hover {
@@ -358,11 +365,10 @@ img {
             color: #000;
         }
         
-        /* 드롭다운 메뉴 스타일 */
         .dropdown {
             position: relative;
         }
-
+        
         .dropdown .dropdown-btn {
             padding: 10px 15px;
             border: none;
@@ -372,12 +378,12 @@ img {
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-
+        
         .dropdown .dropdown-btn:hover {
             background-color: #ffd744;
             color: #000;
         }
-
+        
         .dropdown .dropdown-menu {
             display: none; /* 기본적으로 숨김 */
             position: absolute;
@@ -389,7 +395,7 @@ img {
             z-index: 1000;
             width: max-content;
         }
-
+        
         .dropdown .dropdown-menu button {
             display: block;
             padding: 10px 15px;
@@ -400,16 +406,16 @@ img {
             cursor: pointer;
             text-align: left;
         }
-
+        
         .dropdown .dropdown-menu button:hover {
             background-color: #ffd744;
             color: #000;
         }
-
-        /* 드롭다운 활성화 시 표시 */
+        
         .dropdown.open .dropdown-menu {
             display: block;
         }
+        
 
 
 
@@ -439,4 +445,27 @@ img {
         font-size: 16px;
     }
 
+}
+
+@media (max-width: 768px) {
+    #tags {
+        flex-wrap: wrap; /* 줄바꿈 유지 */
+        gap: 8px; /* 버튼 간격 좁힘 */
+        justify-content: flex-start; /* 모바일에서는 왼쪽 정렬 */
+    }
+
+    .tag-btn {
+        padding: 8px 10px; /* 버튼 크기 축소 */
+        font-size: 14px; /* 글자 크기 축소 */
+    }
+
+    .dropdown .dropdown-btn {
+        padding: 8px 10px; /* 드롭다운 버튼 크기 축소 */
+        font-size: 14px;
+    }
+
+    .dropdown .dropdown-menu button {
+        padding: 8px 10px; /* 드롭다운 메뉴 버튼 크기 축소 */
+        font-size: 14px;
+    }
 }

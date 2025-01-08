@@ -1,5 +1,9 @@
 // firebase-init.js
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
+
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyAG77bT0YaKUX33IrSjV3cc4N3nKdC_dY4",
@@ -11,5 +15,8 @@ const firebaseConfig = {
     measurementId: "G-20WL1R0QYG"
 };
 
-// Firebase 초기화
+
 const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+// Firebase 초기화
