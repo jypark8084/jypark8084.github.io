@@ -6,9 +6,11 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "npm": "^11.0.0",
+    "start": "^5.1.0"
   },
   "engines": {
-    "node": ">=14.0.0" 
+    "node": ">=14.0.0"
   }
 }

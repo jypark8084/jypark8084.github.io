@@ -5,6 +5,14 @@ let pageViews = {}; // 메모리에 조회수 저장
 
 app.use(express.json());
 
+// 루트 경로에서 조회수 증가
+app.get('/', (req, res) => {
+    const pageId = 'home'; // 특정 페이지 ID를 할당
+    pageViews[pageId] = (pageViews[pageId] || 0) + 1;
+
+    res.send(`서버가 정상적으로 실행 중입니다! 홈 페이지 조회수: ${pageViews[pageId]}`);
+});
+
 // 조회수 증가 API
 app.post('/api/views', (req, res) => {
     const { pageId } = req.body;
@@ -25,8 +33,8 @@ app.get('/api/views/:pageId', (req, res) => {
     res.send({ pageId, views });
 });
 
-// 서버 실행
-const PORT = process.env.PORT || 8080; // 클라우드 타입은 기본적으로 8080 포트를 사용
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`서버 실행 중: http://localhost:${PORT}`);
 });
+
