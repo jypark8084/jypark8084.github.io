@@ -1,11 +1,18 @@
 const express = require('express');
+const cors = require('cors'); // CORS 패키지 추가
+const path = require('path'); // 파일 경로 처리
 const app = express();
 
-// 조회수 저장 객체
-let pageViews = {};
+// CORS 활성화
+app.use(cors({
+    origin: 'https://jypark8084.github.io', // 허용할 도메인
+}));
 
 // JSON 요청 처리
 app.use(express.json());
+
+// 조회수 저장 객체
+let pageViews = {};
 
 // 루트 경로에서 조회수 증가
 app.get('/', (req, res) => {
@@ -34,7 +41,7 @@ app.get('/api/views/:pageId', (req, res) => {
     res.json({ pageId, views });
 });
 
-const path = require('path');
+// favicon.ico 처리
 app.get('/favicon.ico', (req, res) => {
     res.sendFile(path.join(__dirname, 'favicon.ico'));
 });
