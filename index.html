@@ -76,6 +76,7 @@
 
         </ul>
     </section>
+    <p id="viewCounter">조회수: 로딩 중...</p>
     <section id="posts" class="posts">
         <div class="post-list123">
             <!-- 사이트 소개 -->
@@ -102,9 +103,10 @@
             </section>
         </div>
     </section>
+
     <script>
         const pageId = 'examplePage'; // 조회할 페이지 ID
-        const apiURL = 'https://node-server.onrender.com/api/views'; // Render 배포 URL
+        const apiURL = 'https://<크라우드타입-배포-URL>/api/views'; // 크라우드타입 URL
 
         // 조회수 증가 API 호출
         fetch(apiURL, {
@@ -120,6 +122,7 @@
         })
         .catch(error => {
             console.error('조회수 증가 실패:', error);
+            document.getElementById('viewCounter').innerText = '조회수 로드 실패';
         });
     </script>
     
