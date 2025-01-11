@@ -34,6 +34,11 @@ app.get('/api/views/:pageId', (req, res) => {
     res.json({ pageId, views });
 });
 
+const path = require('path');
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, 'favicon.ico'));
+});
+
 // 서버 실행
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
