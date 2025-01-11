@@ -102,6 +102,26 @@
             </section>
         </div>
     </section>
+    <script>
+        const pageId = 'examplePage'; // 조회할 페이지 ID
+        const apiURL = 'https://node-server.onrender.com/api/views'; // Render 배포 URL
+
+        // 조회수 증가 API 호출
+        fetch(apiURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ pageId }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('viewCounter').innerText = `조회수: ${data.views}`;
+        })
+        .catch(error => {
+            console.error('조회수 증가 실패:', error);
+        });
+    </script>
     
     <script src="scripts/main.js"></script>
     <footer>
