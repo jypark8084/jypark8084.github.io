@@ -3,10 +3,14 @@ const cors = require('cors'); // CORS 패키지 추가
 const path = require('path'); // 파일 경로 처리
 const app = express();
 
-// CORS 활성화
+
+// 특정 도메인만 허용
 app.use(cors({
-    origin: 'https://jypark8084.github.io', // 허용할 도메인
+    origin: 'https://jypark8084.github.io', // 허용할 클라이언트 도메인
+    methods: ['GET', 'POST'],              // 허용할 HTTP 메서드
+    allowedHeaders: ['Content-Type'],      // 허용할 헤더
 }));
+
 
 // JSON 요청 처리
 app.use(express.json());
