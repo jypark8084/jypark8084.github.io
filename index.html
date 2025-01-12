@@ -106,9 +106,9 @@
 
     <script>
         const pageId = 'examplePage'; // 조회할 페이지 ID
-        const apiURL = 'https://port-0-jypark8084-m5ru0lmrc98ed9b1.sel4.cloudtype.app';
+        const apiURL = 'https://port-0-jypark8084-m5ru0lmrc98ed9b1.sel4.cloudtype.app/api/views';
 
-
+    
         // 조회수 증가 API 호출
         fetch(apiURL, {
             method: 'POST',
@@ -126,6 +126,7 @@
             document.getElementById('viewCounter').innerText = '조회수 로드 실패';
         });
     </script>
+    
     
     <script src="scripts/main.js"></script>
     <footer>
