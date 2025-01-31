@@ -1,0 +1,31 @@
+name: Deploy to Cloudtype
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy to Cloudtype
+        env:
+          CLOUDTYPE_API_KEY: ${{ secrets.CLOUDTYPE_API_KEY }}
+        run: |
+          curl -X POST \
+          -H "Authorization: Bearer $CLOUDTYPE_API_KEY" \
+          -F "repository=https://github.com/your-username/node-view-counter.git" \
+          -F "branch=main" \
+          https://api.cloudtype.io/deployments
