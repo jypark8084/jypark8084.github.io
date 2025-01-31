@@ -1,49 +1,64 @@
-<!--subindex(1).html-->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta property="og:title" content="현재 오픈중인 서버 목록" />
-    <meta property="og:description" content="현재 운영중인 서버들을 확인해보세요!" />
-    <meta property="og:image" content="../nitrado/serverinfo.png" />
-    <meta property="og:type" content="website" />
-    <meta name="description" content="모바일 아크 게임 관련 정보와 이벤트를 제공하는 사이트입니다.">
-    <meta name="keywords" content="모바일 아크, 아크 서바이벌, 게임 정보, 아크 공략, 이벤트 서버">
-    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="Xh7g6uMDnEDu5vp4eVjLELplnHJBVopTGF15H6S_Jz8" />
+    <meta property="og:title" content="모바일 아크 정보" />
+    <meta property="og:description" content="made by 대리인" />
+    <meta property="og:image" content="main/ultlmateark.jpg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모바일 아크 정보</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <script type="module" src="/scripts/firebase-init.js"></script>
+    <script type="module" src="/scripts/auth.js"></script>
+    <script type="module" src="/scripts/sudebarMenu.js"></script>
+
 </head>
 <body>
     <header>
         <div class="logo">모바일 아크</div>
-        <nav>
-            <ul>
-                <li><a href="/index.html">홈</a></li>
-                <li><a href="#posts">글 목록</a></li>
-                <li><a href="/Introduction/About.html">소개</a></li>
-                <li><a href="/login/login/login.html">로그인</a></li>
-            </ul>
-        </nav>
+        <div class="nav-login-hamburger">
+            <nav>
+                <ul>
+                    <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
+                </ul>
+            </nav>
+            <!-- nav 바깥에 햄버거 메뉴 추가 -->
+            <div class="hamburger" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
+
+    <!-- 사이드 메뉴 -->
+    <aside class="sidebar" id="sidebarMenu">
+        <div class="close-btn" id="closeBtn">&times;</div>
+        <h2>목록</h2>
+        <ul>
+            <li><a href="/uark/">아크 얼티메이트 소식</a></li>
+            <li><a href="#event">비공식 서버</a></li>
+            <li><a href="#community">아크 명령어</a></li>
+            <li><a href="#guides">니트라도</a></li>
+            <li><a href="#community">후원자</a></li>
+        </ul>
+    </aside>
+    
     <section id="home" class="hero">
         <h1>최신 게임 꿀팁과 정보</h1>
         <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
     </section>
-    <section id="posts" class="posts">
-        <div class="post-list">
-            <h3>서버 설정을 선택해주세요.</h3>
-                <p>현재 운영이 중단 됬거나 여러가지 논란이 있는 서버들은 목록에 제외 됩니다</p>
-            <button class="server-btn" onclick="showServerInfo('PVE')">PVE</button>
-            <button class="server-btn" onclick="showServerInfo('PVP')">PVP</button>
-            <article id="server-info">
-            </article>
-            <div class="server-list" id="server-list"></div>
-        </div>
+
+    <section id="serverList">
+        <h2>서버 목록</h2>
+        <ul id="serverItems"></ul>
     </section>
+
+    
+    <script src="script.js"></script>
     <footer>
-        <p>&copy; 대리인. 모든 권리 보유.</p>
+        <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
     </footer>
 </body>
 </html>

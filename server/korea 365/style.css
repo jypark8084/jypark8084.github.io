@@ -18,6 +18,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* nav 아래로 햄버거를 위치시키기 위해 flex-direction: column;을 고려할 수도 있으나
+       현재 구조에서는 필요 없음 */
 }
 
 .logo {
@@ -25,44 +27,47 @@ header {
     font-weight: bold;
 }
 
+/* Hero Section */
+.hero {
+    background-color: #000; /* 기본 배경색 추가 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/main/ultlmateark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 100px 20px;
+    color: #ffffff;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
 nav ul {
     list-style: none;
     display: flex;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.hero {
-    background-image: url('../../main/ultlmateark.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffffd0;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-
 
 #about{
-padding: 50px 20px;
-background-color: #1f1f1f;
-color: #e0e0e0;
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
 }
 
 footer {
-background-color: #1f1f1f;
-color: #e0e0e0;
-text-align: center;
-padding: 20px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
 }
 
 nav ul li a {
@@ -77,129 +82,275 @@ nav ul li a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #ffd744; /* 밑줄 색상을 흰색으로 설정 */
+    background-color: #ffd744; 
     left: 0;
-    bottom: -5px; /* 텍스트와 밑줄 간격 */
-    transition: width 0.3s ease; /* 밑줄이 나타나는 애니메이션 */
-    font-weight: 600; /* 글자 굵기 증가 */
+    bottom: -5px; 
+    transition: width 0.3s ease; 
+    font-weight: 600; 
 }
 
 nav ul li a:hover::after {
-    width: 100%; /* 마우스 호버 시 밑줄의 길이를 100%로 변경 */
+    width: 100%; 
 }
 
+/* Hero Section */
+.hero {
 
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.option-btn {
-    width: 45%;
-    margin: 5px;
-    padding: 20px;
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    background-color: hsl(44, 85%, 53%);
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    padding: 100px 20px;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
     font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4757;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.toggle-button {
-    display: inline-block;
-    background-color: #ff4757;
-    color: #fff;
-    font-size: 18px;
-    border: none;
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-}
-
-/* 공지 버튼 호버 효과 */
-.toggle-button:hover {
-    background-color: #ff6b81;
-    transform: translateY(-5px);
-}
-
-/* 공지 버튼 클릭 효과 */
-.toggle-button:active {
-    transform: scale(0.95);
+.cta-button:hover {
     background-color: #e84118;
 }
-/* 마우스 호버시 색상 변경 */
-.option-btn:hover {
-    background-color: #e1e721;
+
+
+/* 햄버거 아이콘 스타일 */
+.hamburger {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 10px;
 }
 
-.nitradobutton-container {
-    text-align: right;
-    margin-bottom: 20px; /* 필요에 따라 간격 조절 */
+.hamburger span {
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
 }
 
-.nitradobutton {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: rgb(0, 0, 0);
-    background-color: hsl(44, 85%, 53%);
+/* 사이드바 스타일 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* 처음에 화면 밖에 위치 */
+    width: 250px;
+    height: 100%;
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 999; /* 상단에 위치하게 */
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* 사이드바 닫기 버튼 스타일 */
+.close-btn {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+
+
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
+/* content-section 공통 스타일 */
+.content-section {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+        /* 추가 스타일 (필요 시) */
+        .nav-login-hamburger {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-login-hamburger nav ul {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        /* nav 안에 로그인 링크만 있으므로 불필요한 여백은 최소화 */
+        .nav-login-hamburger nav ul li {
+            margin: 0;
+        }
+        
+        .nav-login-hamburger .hamburger {
+            margin-left: 10px;
+        }
+
+
+
+        /* 홍보글 섹션 */
+#promotion {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.promotion-text h2 {
+    font-size: 28px;
+    color: #ffd744;
+    margin-bottom: 20px;
+}
+
+.promotion-text img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.promotion-text p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.promotion-text button {
+    background-color: #ff4757;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
     border: none;
-    cursor: pointer;
-       
-}
-
-.nitradobutton:hover {
-    background-color: hsl(44, 75%, 50%);
-}
-
-    
-
- /* 숨겨진 공지 내용 */
- #hidden-content {
-    display: none; /* 처음에 공지 내용은 감춰짐 */
-}
-#hidden-content.visible {
-    display: block; /* 클릭 후 공지 내용을 보여줌 */
-}
-/* 커서가 포인터 모양으로 변경되도록 스타일 추가 */
-.toggle-button {
-    cursor: pointer;
-    color: blue; /* 클릭 가능하다는 느낌을 주기 위해 파란색으로 설정 */
-}
-
-#hidden-content {
-    display: none; /* 처음에 공지 내용은 감춰짐 */
-}
-#hidden-content.visible {
-    display: block; /* 클릭 후 공지 내용을 보여줌 */
-}
-/* 커서가 포인터 모양으로 변경되도록 스타일 추가 */
-.toggle-button {
-    cursor: pointer;
-    color: yellow; /* 클릭 가능하다는 느낌을 주기 위해 파란색으로 설정 */
-    padding: 5px;
     border-radius: 5px;
-}
-#hidden-content {
-    display: none; /* 처음에 공지 내용은 감춰짐 */
-}
-#hidden-content.visible {
-    display: block; /* 클릭 후 공지 내용을 보여줌 */
-}
-/* 커서가 포인터 모양으로 변경되도록 스타일 추가 */
-.toggle-button {
     cursor: pointer;
-    color: blue; /* 클릭 가능하다는 느낌을 주기 위해 파란색으로 설정 */
+    transition: background-color 0.3s ease;
+}
+
+.promotion-text button:hover {
+    background-color: #e84118;
+}
+
+.promotion-text p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+    text-align: left;  /* 왼쪽 정렬 추가 */
+}
+
+.promotion-text {
+    text-align: center; /* 기본적으로 중앙 정렬 */
+    display: flex;
+    flex-direction: column; /* 수직 방향으로 쌓이도록 설정 */
+    align-items: flex-start; /* 기본적으로 왼쪽 정렬 */
+}
+
+.promotion-text .server-info {
+    text-align: left;  /* 서버 인원과 카톡방 인원 왼쪽 정렬 */
+    margin-left: 20px;  /* 왼쪽 여백 추가 (선택적) */
+}
+
+
+.promotion-text button {
+    background-color: #ff4757;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* 왼쪽 정렬 */
+    margin-top: 20px; /* 상단 여백 추가 */
+}
+
+.promotion-text button:hover {
+    background-color: #e84118;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* 전체 텍스트 크기 감소 */
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
 }

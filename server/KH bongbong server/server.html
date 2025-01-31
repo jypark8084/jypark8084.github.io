@@ -1,131 +1,157 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta property="og:title" content="KH bongbong server(24.03.28~ing)" />
-    <meta property="og:description" content="현재 이서버에 관련해서 알아보세요!" />
-    <meta property="og:image" content="../serverimage/KH BongBong PVE server.jpg" />
-    <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website" />
-
+    <meta name="google-site-verification" content="Xh7g6uMDnEDu5vp4eVjLELplnHJBVopTGF15H6S_Jz8" />
+    <meta property="og:title" content="모바일 아크 정보" />
+    <meta property="og:description" content="made by 대리인" />
+    <meta property="og:image" content="main/ultlmateark.jpg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게임 정보 허브</title>
+    <title>모바일 아크 정보</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="/scripts/firebase-init.js"></script>
+    <script type="module" src="/scripts/auth.js"></script>
+    <script type="module" src="/scripts/sudebarMenu.js"></script>
+    <script type="text/javascript">
+        function toggleNotice() {
+            var notice = document.getElementById('notice');
+            if (notice.style.display === 'none' || notice.style.display === '') {
+                notice.style.display = 'block';
+            } else {
+                notice.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="logo">모바일 아크</div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">홈</a></li>
-                <li><a href="#posts">글 목록</a></li>
-                <li><a href="/Introduction/About.html">소개</a></li>
-                <li><a href="../../login//login/login.html">로그인</a></li>
-            </ul>
-        </nav>
+        <div class="nav-login-hamburger">
+            <nav>
+                <ul>
+                    <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
+    <!-- 사이드 메뉴 -->
+    <aside class="sidebar" id="sidebarMenu">
+        <div class="close-btn" id="closeBtn">&times;</div>
+        <h2>목록</h2>
+        <ul>
+            <li><a href="/uark/">아크 얼티메이트 소식</a></li>
+            <li><a href="#event">비공식 서버</a></li>
+            <li><a href="#community">아크 명령어</a></li>
+            <li><a href="#guides">니트라도</a></li>
+            <li><a href="#community">후원자</a></li>
+        </ul>
+    </aside>
+    
     <section id="home" class="hero">
         <h1>최신 게임 꿀팁과 정보</h1>
         <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
     </section>
 
-    <div class="container">
-        <section class="news">
+    <!-- 홍보글 섹션 -->
+    <section id="promotion" class="content-section">
+        
+        <div class="promotion-text">
             <h2>KH bongbong server(24.03.28~ing)</h2>
-            <img src="../serverimage/KH BongBong PVE server.jpg" alt="KH bongbong server(24.03.28~ing) 아크모바일 이미지" width="300" height="150">
-            <article id="server-info">
-                <h3>서버 인원: 12 <br> 
-                카톡방 인원: 43<br>
-                어드민: 보니밤 and 에스프레소
-                </h3>
-                
-                <!-- 공지 클릭 버튼 -->
-                <p class="toggle-button" onclick="toggleContent()">[공지]</p>
-                
-                <!-- 공지 숨겨진 내용 -->
-                <div id="hidden-content">
-                    <section class="server-info">
-                        <h2>서버 정보</h2>
-                        <p><span class="highlight">서버 비밀번호</span> - 오픈 프로필 "보니밤"에게 개인 톡으로 문의 후, 인증 절차를 거쳐야 플레이 가능합니다.</p>
-                        <p>주의: 인사 없이 다짜고짜 비밀번호 요청은 받지 않습니다. (오전 12시부터 밤 11시까지는 관리자가 잠시 자리를 비울 수 있습니다.)</p>
-            
-                    <section class="rules-section">
-                        <h2>서버 규칙</h2>
-                        <ul>
-                            <li>🚫 <span class="highlight">평일 11:00~22:00 관리자 멘션 금지</span></li>
-                            <li>분위기 흐리는 언행 금지 (욕설, 패드립, 성드립 등)</li>
-                            <li>엠버 캐릭터 및 핵 팔이 금지</li>
-                            <li>타 서버 언급 금지</li>
-                            <li>화산과 그린 오벨리스크 주차 및 건축 금지</li>
-                            <li>사용 후 테이밍장은 바로 철거</li>
-                            <li>동굴 내부 및 오벨 근처에 침대 설치 금지 (침낭은 가능)</li>
-                            <li>기타 건축 제한 사항 준수</li>
-                            <li>현금 거래 금지</li>
-                            <li>서버 비밀번호 유포 금지</li>
-                        </ul>
-                    </section>
-            
-                    <section class="support-section">
-                        <h2>신규 유저 지원</h2>
-                        <p>지원 물품:</p>
-                        <ul>
-                            <li>아르젠 1마리 (30레벨업)</li>
-                            <li>선조도곡낫</li>
-                            <li>솥 5개</li>
-                            <li>무포 2개</li>
-                        </ul>
-                        <p>지원 받는 방법: 톡방 ❤ 누르고 인증 후 지급</p>
-                    </section>
-            
-                    <section class="shop-section">
-                        <h2>어드민 상점</h2>
-            
-                        <h3>엠버 캐릭터</h3>
-                        <ul>
-                            <li>엠버 1만 = 3000원</li>
-                            <li>엠버 3만 = 5000원</li>
-                            <li>엠버 10만 = 10,000원</li>
-                        </ul>
-            
-                        <h3>공룡 레벨업</h3>
-                        <ul>
-                            <li>10레벨업: 500원</li>
-                            <li>60레벨업: 2000원</li>
-                        </ul>
-            
-                        <h3>수딩 상점</h3>
-                        <ul>
-                            <li>철갑 1셋 : 수딩 3개</li>
-                            <li>각종 무기 완제: 수딩 5개 (테크 총 제외)</li>
-                            <li>테크 건축물 (가격별로 세분화)</li>
-                            <li>테크 갑옷 풀셋 (아머 9000): 수딩 50개</li>
-                            <li>테크 총 (뎀지 710): 수딩 30개</li>
-                        </ul>
-            
-                        <h3>자원 상점</h3>
-                        <p>구매 가능한 자원:</p>
-                        <ul>
-                            <li>1개당 1원 (나무, 짚, 가죽 등) - 최소 1000개부터 구매 가능</li>
-                            <li>1개당 2원 (철괴, 회로 원본, 중합체 등) - 최소 1000개부터 구매 가능</li>
-                        </ul>
-                    </section>
-                </section>
-                </div>
-        <h4><br>
-            위 서버는 가장 장수 서버 입니다 초창기 부터 절대로 서버가 한번도 닫힌적도 없는 서버입니다 섭장님도 매우 좋으신 분이므로 만약
-            장기적으로 하실 생각이 있으시면 위 서버를 추천 드립니다
-        </h4><br>
-        <a href="https://open.kakao.com/o/gX1sBe4e" target="_blank">
-        <img src="../카카오톡.png" alt="카카오톡 이미지" width="50" height="50">
-    </div>
+            <img src="KH BongBong PVE server.jpg" alt="KH bongbong server(24.03.28~ing) 서버 이미지" class="centered-image">
+            <p>서버 인원: 12</p>
+            <p>카톡방 인원: 63</p>
+            <p>어드민: 보니밤 and 에스프레소</p>
+            <button onclick="toggleNotice()">공지 보기</button>
+            <div id="notice" style="display: none; margin-top: 20px;">
+                <p>✨KH bongbong server(24.03.28~ing)✨<br>
+                    서버비번 - 오픈프로필 "보니밤" 에게<br>
+                                     "갠톡으로"물어보세요<br>
+                                      몇가지 인증 후 플레이 가능해요.<br>
+                                 (인사 없이 다짜고짜 비번달라시면 안드려요 ^^)<br>
+                    🚫⛔아침 12시~밤 23시까지는 어드가 잠을 자기때문에 못볼 수 있어용 ㅠ (멘션금지)⛔🚫<br><br>
+                    
+                    😊서버규칙 필독바랍니다^-^😊<br><br>
+                    
+                    💟신규유저 지원 💟<br>
+                    아르젠 1마리(30렙업)+선조도곡낫+솥5개+무포2개<br>
+                    -> 톡방 ❤ 누르고 인증후 드려요!<br>
+                    톡방닉 :  인게임닉(부족명)<br>
+                    예시 - 홍길동(길동이부족)<br><br>
+                    
+                    ☠😡평일 11:00~22:00 어드 멘션 절대절대 금지😡☠<br>
+                    💟분위기를 흐리는 언행(욕설 패드립 성드립 등) 벤<br>
+                    💟엠버캐&핵팔이 퇴출(벤)<br>
+                    💟타섭 언급 금지!!<br>
+                    💟화산은 공용구역으로 건축금지입니다.<br>
+                    💟그린오벨은 서버 공용 테이밍장입니다. <br>
+                         생물주차를 금지합니다<br>
+                    💟테이밍장은 사용 후 바로 철거해주세요.<br>
+                    💟동굴 입구 동굴 안 침대 설치 금지(침낭 가능)<br>
+                    💟동굴내부,입구, 오벨 근처 오벨에 건축X(침낭가능)<br>
+                    💟토대작 금지(서버렉을 유발합니다.)<br>
+                    💟부족마다 베이스는 하나씩만 가능<br>
+                         나무플랫폼 부족당 1개 가능<br>
+                    💟화산 테두리 절토 설치 가능<br>
+                     화산 주차는 절토 위에 해주세요<br>
+                    💟궁금한 점 신고 사항은 어드들께 갠톡 하기<br>
+                    💟무분별한 생물 대거 생산 금지<br>
+                    💟오벨 화산 등 장기 주차 하지마세요<br>
+                    💟관리소홀, 떠도는 공룡들 처치합니다<br>
+                       (메인 건축물 3일 남았을 시 철거 대상입니다!)<br>
+                    💟동굴 내부 생명체 주차금지<br>
+                    💟유저간 현금거래 금지<br>
+                    ❤화산 절토에 무료 쇠지렛대가 비치되어있습니다.<br>
+                         (필요한만큼만 쓰세요! 막 가져가다 걸리면 벤)<br>
+                    ❤레드오벨에 자원금고가 비치되어 있습니다.<br>
+                         (쓰지도 못할만큼 왕창 가져가거나 막 버리다가 <br>
+                          걸리면 부족 올벤입니다.)<br>
+                          ㅡ> 자원은 매주 월요일 새벽에 리필됩니다.<br><br>
+                    
+                    ❤‍🔥 서버비번 유포 금지입니다!❤‍🔥<br><br><br>
+                    
+                    
+                    💟어드 상점💟<br><br>
+                    
+                    엠버 캐릭터🚫대리인님께 문의해주세여🚫<br>
+                    [캐릭터 안에 넣을 엠버를 말하는 것 입니다]<br>
+                    엠버 1만 = 3000원<br>
+                    엠버 3만 = 5,000원<br>
+                    엠버 10만 = 10,000원<br><br>
+                    
+                    💟공룡렙업💟<br>
+                    10렙업: 500원<br>
+                    60렙업: 2000원<br><br>
+                    
+                    💟수딩상점💟<br>
+                    🚫오후12:00~22:00는 어드가 잠을 자요🚫<br>
+                    -철갑 1셋 : 수딩3개<br>
+                    -각종 무기 완제: 수딩5개(텤총제외)<br>
+                    -각종 테크 건축물<br>
+                      텍복: 수딩5개 <br>
+                      텍발: 수딩4개<br>
+                      순동기: 수딩3개<br>
+                      키블 프로세서: 수딩5개<br>
+                      챔버: 수딩2개<br>
+                      무포: 개당 수딩1개<br>
+                      금목: 수딩 10개<br>
+                      테크갑옷 풀셋(아머9천): 수딩50개<br>
+                      테크총(뎀지710): 수딩30개<br>
+                      원소 30개: 수딩1개<br><br>
+                    
+                    🦕 공룡 상점은 운영하지 않습니다.</p>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        function toggleContent() {
-            var content = document.getElementById('hidden-content');
-            content.classList.toggle('visible'); // 클래스를 토글하여 숨기거나 보여줍니다.
-        }
-    </script>
-
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
+    </footer>
 </body>
 </html>

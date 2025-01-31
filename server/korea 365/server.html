@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta property="og:title" content="KOREA 365 (비공식 / PVE) 아크모바일" />
-    <meta property="og:description" content="현재 이서버에 관련해서 알아보세요!" />
-    <meta property="og:image" content="../serverimage/korea365.jpg" />
-    <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website" />
-
+    <meta name="google-site-verification" content="Xh7g6uMDnEDu5vp4eVjLELplnHJBVopTGF15H6S_Jz8" />
+    <meta property="og:title" content="모바일 아크 정보" />
+    <meta property="og:description" content="made by 대리인" />
+    <meta property="og:image" content="main/ultlmateark.jpg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게임 정보 허브</title>
+    <title>모바일 아크 정보</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="/scripts/firebase-init.js"></script>
+    <script type="module" src="/scripts/auth.js"></script>
+    <script type="module" src="/scripts/sudebarMenu.js"></script>
+    <script type="text/javascript">
+        function toggleNotice() {
+            var notice = document.getElementById('notice');
+            if (notice.style.display === 'none' || notice.style.display === '') {
+                notice.style.display = 'block';
+            } else {
+                notice.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="logo">모바일 아크</div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">홈</a></li>
-                <li><a href="#posts">글 목록</a></li>
-                <li><a href="/Introduction/About.html">소개</a></li>
-                <li><a href="../../login//login/login.html">로그인</a></li>
-            </ul>
-        </nav>
+        <div class="nav-login-hamburger">
+            <nav>
+                <ul>
+                    <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
+    <!-- 사이드 메뉴 -->
+    <aside class="sidebar" id="sidebarMenu">
+        <div class="close-btn" id="closeBtn">&times;</div>
+        <h2>목록</h2>
+        <ul>
+            <li><a href="/uark/">아크 얼티메이트 소식</a></li>
+            <li><a href="#event">비공식 서버</a></li>
+            <li><a href="#community">아크 명령어</a></li>
+            <li><a href="#guides">니트라도</a></li>
+            <li><a href="#community">후원자</a></li>
+        </ul>
+    </aside>
+    
     <section id="home" class="hero">
         <h1>최신 게임 꿀팁과 정보</h1>
         <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
     </section>
 
-    <div class="container">
-        <section class="news">
-            <h2>KOREA 365 (비공식 / PVE) 아크모바일</h2>
-            <img src="../serverimage/korea 365.jpg" alt="KOREA 365 (비공식 / PVE) 아크모바일 이미지" width="300" height="150">
-            <article id="server-info">
-                <h3>서버 인원: 12 <br> 
-                카톡방 인원: 55<br>
-                어드민: 아브라함/도깨비 [동고집, 대리인 톡방 부방]
-                </h3>
-                
-                <!-- 공지 클릭 버튼 -->
-                <p class="toggle-button" onclick="toggleContent()">[공지]</p>
-                
-                <!-- 공지 숨겨진 내용 -->
-                <div id="hidden-content">
-                    <section class="server-info">
-                        <h4>
-                        서버명 : KOREA 365 
-                        PVE/12인/비번<br><br>
+    <!-- 홍보글 섹션 -->
+    <section id="promotion" class="content-section">
+        
+        <div class="promotion-text">
+            <h2>KOREA 365 (비공식 / PVE)</h2>
+            <img src="korea 365.jpg" alt="KOREA 365 서버 이미지" class="centered-image">
+            <p>서버 인원: 12</p>
+            <p>카톡방 인원: 55</p>
+            <p>어드민: 아브라함/도깨비 [동고집, 대리인 톡방 부방]</p>
+            <button onclick="toggleNotice()">공지 보기</button>
+            <div id="notice" style="display: none; margin-top: 20px;">
+                <p>오픈프로필 아니신 유저분들과<br>
+                    게임내 단톡방과 유저명이 다르신분은<br>
+                    지금 현시간부터 강제퇴장되시며 <br><br>
+                    
+                    재입장불가합니다.<br><br>
+                    
+                    부족끼리 비번공유중 이신분은 <br>
+                    부족명단 캡쳐하여 개인톡으로 부탁드립니다.</p>
+            </div>
+        </div>
+    </section>
 
-                        KOREA 365서버를 방문해주셔서 감사합니다<br><br>
-
-                        저희서버는 유저님들의 자유를 보장합니다.<br><br>
-
-                        유저님들이 다른서버를 해보신 <br><br>
-
-                        경험은 다들 많으실거라고 생각됩니다.<br><br>
-
-                        저희서버또한 그서버들과 같이 매너를 최우선으로<br><br>
-
-                        생각하고있으니 유저님들의 인격을 믿고 <br><br>
-
-                        따로이 규칙은 없습니다.<br><br>
-
-                        자유롭게 매너를 지키면서 플레이해주시면 <br><br>
-
-                        더욱 좋은서버가 되도록 노력하겠습니다.<br><br>
-                    </h4>
-                    </section>
-                </div>
-        <h4><br>
-            위 서버는 가장 장수 서버 입니다 초창기 부터 절대로 서버가 한번도 닫힌적도 없는 서버입니다 섭장님도 매우 좋으신 분이므로 만약
-            장기적으로 하실 생각이 있으시면 위 서버를 추천 드립니다
-        </h4><br>
-        <a href="https://open.kakao.com/o/gX1sBe4e" target="_blank">
-        <img src="../카카오톡.png" alt="카카오톡 이미지" width="50" height="50">
-    </div>
-
-    <script>
-        function toggleContent() {
-            var content = document.getElementById('hidden-content');
-            content.classList.toggle('visible'); // 클래스를 토글하여 숨기거나 보여줍니다.
-        }
-    </script>
-
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
+    </footer>
 </body>
 </html>

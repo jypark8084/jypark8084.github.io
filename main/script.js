@@ -1,50 +1,44 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mainMenu = document.getElementById("main-menu");
+window.onload = function() {
+    const servers = [
+        {
+            name: "KH BongBong PVE server", players: 0, date: "2025-01-01", hearts: 0, 
+            status: "오프라인", link: "/server/KH bongbong server/server.html"
+        },
+        {
+            name: "KOREA 365", players: 0, date: "2025-01-01", hearts: 0, 
+            status: "온라인", link: "/server/korea 365/server.html"
+        },
+        {
+            name: "korea newbie event server", players: 0, date: "2025-01-01", hearts: 0, 
+            status: "오프라인", link: "/server/KH bongbong server/server.html"
+        },
+        {
+            name: "korea2024", players: 0, date: "2025-01-01", hearts: 0, 
+            status: "온라인", link: "/server/korea2024/server.html"
+        },
+    ];
 
-    menuToggle.addEventListener("click", function() {
-        if (mainMenu.style.display === "flex") {
-            mainMenu.style.display = "none";
-        } else {
-            mainMenu.style.display = "flex";
-        }
+    const serverListContainer = document.getElementById("serverItems");
+
+    servers.forEach(server => {
+        const listItem = document.createElement("li");
+        
+        listItem.classList.add("server-item");
+
+        listItem.innerHTML = `
+            <a href="${server.link}" class="server-link">
+                <div class="server-name">${server.name}</div>
+                <div class="server-info">
+                    <span class="server-players">${server.players}명</span>
+                    <span class="server-date">${server.date}</span>
+                </div>
+                <div class="server-heart">
+                    <span>❤️${server.hearts}</span>
+                </div>
+                <div class="server-status ${server.status === "온라인" ? "online" : "offline"}">${server.status}</div>
+            </a>
+        `;
+        
+        serverListContainer.appendChild(listItem);
     });
-});
-
-const pveServers = [
-    { name: "korea newbie event server", opendate: "2024-09-20", players: "20", kakaoplayer: "53", link: "../server/korea newbie event server/server.html" },
-    { name: "korea2024", opendate: "2024-05-10", players: "12", kakaoplayer: "20", link: "../server/korea2024/server.html" },
-    { name: "KH bongbong server", opendate: "2024-03-8", players: "12", kakaoplayer: "42", link: "../server/KH bongbong server/server.html" },
-    { name: "KOREA 365 (비공식 / PVE)", opendate: "2023-02-12", players: "12", kakaoplayer: "55", link: "../server/korea 365/server.html" }
-];
-const pvpServers = [];
-
-function showServerInfo(type) {
-    const serverInfo = document.getElementById('server-info');
-    const serverList = document.getElementById('server-list');
-    serverList.innerHTML = ''; // 기존 서버 목록 초기화
-
-    if (type === 'PVE') {
-        pveServers.forEach(server => {
-            serverList.innerHTML += `
-                <div class="server-item" onclick="location.href='${server.link || '#'}'">
-                    <h4>${server.name}</h4>
-                    <p>오픈 날짜: ${server.opendate}</p>
-                    <p>서버 인원수: ${server.players}</p>
-                    <p>카카오톡 방 인원수: ${server.kakaoplayer}</p>
-                </div>
-            `;
-        });
-    } else if (type === 'PVP') {
-        pvpServers.forEach(server => {
-            serverList.innerHTML += `
-                <div class="server-item">
-                    <h4>${server.name}</h4>
-                    <p>오픈 날짜: ${server.opendate}</p>
-                    <p>서버 인원수: ${server.players}</p>
-                    <p>카카오톡 방 인원수: ${server.kakaoplayer}</p>
-                </div>
-            `;
-        });
-    }
-}
+};

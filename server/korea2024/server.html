@@ -1,89 +1,240 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta property="og:title" content="korea 2024" />
-    <meta property="og:description" content="현재 이서버에 관련해서 알아보세요!" />
-    <meta property="og:image" content="../serverimage/korea2024.png" />
-    <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website" />
-
+    <meta name="google-site-verification" content="Xh7g6uMDnEDu5vp4eVjLELplnHJBVopTGF15H6S_Jz8" />
+    <meta property="og:title" content="모바일 아크 정보" />
+    <meta property="og:description" content="made by 대리인" />
+    <meta property="og:image" content="main/ultlmateark.jpg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게임 정보 허브</title>
+    <title>모바일 아크 정보</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="/scripts/firebase-init.js"></script>
+    <script type="module" src="/scripts/auth.js"></script>
+    <script type="module" src="/scripts/sudebarMenu.js"></script>
+    <script type="text/javascript">
+        function toggleNotice() {
+            var notice = document.getElementById('notice');
+            if (notice.style.display === 'none' || notice.style.display === '') {
+                notice.style.display = 'block';
+            } else {
+                notice.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="logo">모바일 아크</div>
-        <nav>
-            <ul>
-                <li><a href="../../index.html">홈</a></li>
-                <li><a href="#posts">글 목록</a></li>
-                <li><a href="/Introduction/About.html">소개</a></li>
-                <li><a href="../../login/login.html">로그인</a></li>
-            </ul>
-        </nav>
+        <div class="nav-login-hamburger">
+            <nav>
+                <ul>
+                    <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
+    <!-- 사이드 메뉴 -->
+    <aside class="sidebar" id="sidebarMenu">
+        <div class="close-btn" id="closeBtn">&times;</div>
+        <h2>목록</h2>
+        <ul>
+            <li><a href="/uark/">아크 얼티메이트 소식</a></li>
+            <li><a href="#event">비공식 서버</a></li>
+            <li><a href="#community">아크 명령어</a></li>
+            <li><a href="#guides">니트라도</a></li>
+            <li><a href="#community">후원자</a></li>
+        </ul>
+    </aside>
+    
     <section id="home" class="hero">
         <h1>최신 게임 꿀팁과 정보</h1>
         <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
     </section>
 
-    <div class="container">
-        <section class="news">
-            <h2>KOREA 365 (비공식 / PVE) 아크모바일</h2>
-            <img src="../serverimage/korea2024.jpg" alt="korea 2024 서버 이미지" width="300" height="150">
-            <article id="server-info">
-                <h3>서버 인원: 20 <br> 
-                카톡방 인원: 53<br>
-                어드민: 나랑 놀러갈래, 너랑 놀러갈래, 뭉이, 사, skill
-                </h3>
-                
-                <!-- 공지 클릭 버튼 -->
-                <p class="toggle-button" onclick="toggleContent()">[공지]</p>
-                
-                <!-- 공지 숨겨진 내용 -->
-                <div id="hidden-content">
-                    <section class="server-info">
-                        <s2-h2>서버 설정</s2-h2>
-                        <p>캐쥬, 기본 랩지 100, PVE</p>
-                        <p>철갑셋 1개 도곡칼 낫 지원. 지원은 <span class="highlight">#️⃣skill#️⃣</span>에게 문의하세요.</p>
-                        <p>레드 오벨 근처 쇠지금고에서 갯수 상관없이 필요한 만큼씩만 챙겨가세요.</p>
-                        <p class="s2-warning">⚠️ 엠버 사도 안들어옵니다. 사고 해결 요청하지 마세요 ⚠️</p>
-                        <p>서버 비번은 방장에게 개인 메시지로 문의하세요. 부방에게 연락해도 응답하지 않습니다.</p>
-                        <p>@*** 인증 완료 연락을 받기 전에는 비번이나 지원 아이템을 받을 수 없습니다.</p>
-                        <p>서버장: 나랑놀러갈래</p>
-                        <h3 class="s2-highlight">💥 매우 중요 💥</h3>
-                        <p>3일 미접속 시 서버 내에서 추방됩니다. 특별한 이유가 있을 경우 어드에게 개인 메시지로 연락하세요.</p>
-                        <h3 class="s2-highlight">🚩 서버 규칙 🚩</h3>
-                        <ol>
-                            <li>욕설 및 패드립 금지</li>
-                            <li>핵 금지</li>
-                            <li>알 서리 금지</li>
-                            <li>테러 금지</li>
-                            <!-- 규칙 내용 추가 -->
-                        </ol>
-                        <s2-h3>핵 또는 중국인 엠캐 신고 보상</s2-h3>
-                        <p>첫 신고자에게 선상(50짜리) 10개 드립니다.</p>
-                        <s2-h3>문제 발생 시</s2-h3>
-                        <p>핵, 엠캐, 중국인 등의 신고는 <a href="https://open.kakao.com/o/gocAvZHg" class="link">카카오 오픈 링크</a>를 통해 신고해주세요.</p>
-                    </section>
-                </div>
-                <h4>이 서버는 전화번호까지 받는 서버 입니다 섭장은 성인이며 창의적인 이벤트를 엽니다 개인적으로 오래 그리고 안전한 서버를 원하신다면
-                    이서버를 추천 드립니다
-                 <br> [밑에 있는 카카오톡 이미지를 클릭하시면 해당 톡방으로 이동 합니다]
-                </h4>
-        <a href="https://open.kakao.com/o/gvbmiVqg" target="_blank">
-        <img src="../카카오톡.png" alt="카카오톡 이미지" width="50" height="50">
-    </div>
+    <!-- 홍보글 섹션 -->
+    <section id="promotion" class="content-section">
+        
+        <div class="promotion-text">
+            <h2>korea2024 </h2>
+            <img src="korea2024.jpg" alt="korea2024 서버 이미지" class="centered-image">
+            <p>서버 인원: 6</p>
+            <p>카톡방 인원: 31</p>
+            <p>어드민: 나랑 놀러갈래, 너랑 놀러갈래, 뭉이, 사, skill</p>
+            <button onclick="toggleNotice()">공지 보기</button>
+            <div id="notice" style="display: none; margin-top: 20px;">
+                <p>🇰🇷korea2024🇰🇷<br><br>
 
-    <script>
-        function toggleContent() {
-            var content = document.getElementById('hidden-content');
-            content.classList.toggle('visible'); // 클래스를 토글하여 숨기거나 보여줍니다.
-        }
-    </script>
+                    서버 설정 <br><br>
+                    
+                    캐쥬, 기본 랩지 100, PVE<br>
+                      철갑셋1개 도곡칼낫지원<br>
+                    지원은 #⃣skill#⃣ 한테 가세요<br>
+                    레드오벨 근처 쇠지금고 갯수 상관없이 필요한만큼씩만 챙겨가시면됩니다 <br>
+                     ⚠엠버 사도 안들어옵니다 사고 해결해달라 하지마세요⚠<br>
+                    서버 비번은 방장한테 갠톡 부방한테 연락해도 안됩니다<br>
+                     @*** 인증완료 연락이 오기전엔 비번이나 지원템 못받습니다<br>
+                    서버장:나랑놀러갈래<br>
+                    💥💥💥💥💥매우중요💥💥💥💥💥<br><br>
+                    
+                         3일 미접시 서버내에서 내보냅니다 <br>
+                    특별한이유가있을시 어드갠으로 이야기하시면 넘어갑니다<br><br><br>
+                    
+                    
+                    ⚠⚠전화번호 받습니다 ⚠⚠<br><br>
+                    
+                    핵 인딩등등 이러한이유로 본인 확인한후 비밀번호드립니다<br><br>
+                    
+                    ⚠⚠⚠ 그냥 비번달라 갠톡 해달라등등 <br>
+                    방장멘션 갠톡하면  안볼겁니다 ⚠⚠⚠<br><br>
+                    
+                    🔴🔴🔴 중요🔴🔴🔴<br>
+                    집지으실때 베히모스나 문틀로 집지어서<br>
+                     어디까지 쓰실땅인지 표시해두세요 바리금지<br><br>
+                    
+                    🚩서버 규칙🚩<br>
+                      1. 욕설및 패드립 금지<br>
+                      2. 핵 금지<br>
+                      3. 알 서리 금지<br>
+                      4. 테러 금지<br>
+                      5. 매머드 갑옷으로 가두기 금지<br>
+                      6. 테이밍 방해 금지<br>
+                      7. 야생테러 금지<br>
+                      8. 자삭(메세지 삭제) 금지<br>
+                      9.방생공룡 줍기금지<br>
+                      10. 타게임&단톡방 홍보.언급금지<br>
+                      11.베이스는 각 부족마다 2개<br>
+                      12.알아보기쉽게 인게임닉이랑 톡방닉 동일하게 사용<br>
+                      13.어드이외 비번 공유는 벤입니다<br>
+                      14.부족안에서 핵사용시 부족전체 벤입니다 <br>
+                      15.원소복사만 하지 말아주세요나머진 다가능합니다<br>
+                    (원소복사하면 게임이 금방 끝나요ㅋㅋㅋㅋ)<br>
+                      16.엠캐 핵 경고없이 퇴장입니다<br>
+                      17.도배금지<br>
+                      18.본인집 제외 다른부족집으로 갈땐 물어보고 갈것<br><br>
+                     
+                    ⛔경고2회시 퇴출⛔<br><br>
+                    
+                    ❌한달에 한번   아무일없이 잘활동하시는분 1분은 경고 1회 지워줍니다❌<br><br><br>
+                    
+                    
+                    핵 또는 중국인 앰캐 신고시<br>
+                     첫 신고자에게 선상(50짜리)<br>
+                    10개 드립니다<br><br><br>
+                    
+                    
+                    
+                    ◇공룡거래시 무조건 엠버거래입니다 (수딩X)<br>
+                    ◇유저간 공룡시세 꼭 지켜주세요<br>
+                    ◇현물거래 금지입니다<br>
+                    ◇부정거래 적발 시<br>
+                      - 1차 경고(부정거래 공룡 사살)<br>
+                      - 2차 벤<br>
+                    ◇엠버거래는  육아템 & 페로몬으로받습니다<br>
+                    ◇교배 불가능한 공룡 거래불가<br>
+                     -거미 지네 뱀 전갈 말똥구리 등<br>
+                    ◇던전 생물 구매 시 일반이 뜨면 1회 다시 해드리기<br>
+                     -전에 나온 일반은 어드가 가서 죽입니다<br>
+                     -일반에 임플이 있을 시 다시 해드립니다<br>
+                    🔥유저간 교배가능한 수정란, 새끼로 거래<br>
+                    🔥거세 판매는 어드만 가능합니다<br>
+                    -거세된 생물들은 원래 가격에 -5 입니다<br>
+                    🔥어드님에게 기가&케찰 구매 시 렙 60UP!<br><br>
+                    
+                    ☢ 수딩거래☢(설계기준 잃어버리면 어드는 책임없음)<br>
+                     샷건블프<br>
+                     무기블프<br>
+                     충마탄<br>
+                     마탄등등 소모품이나 블프 거래시 사용가능<br>
+                    🚺(유저들끼리 거래)🚹<br>
+                    ⛔수딩으로 공룡거래 절대 금지⛔<br>
+                    🌟시세는 빌려주거나 파는사람맘. 싯가🌟<br><br><br><br><br><br>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    🦕육지공룡 🦕<br>
+                    ☆소형 : 20<br>
+                    ☆중형 : 30<br>
+                    ☆대형 : 60<br><br><br>
+                    
+                    
+                     🐬해양공룡 🐬<br>
+                    ☆소형 : 30 (아귀, 쥐가오리, 이크티오)<br>
+                    ☆중형 : 40 (메갈로돈, 던클리오스테우스)<br>
+                    ☆대형 : 60 (플레시오)<br><br>
+                    
+                     육페나 초페 먹인 수정란도 팝니다<br>
+                     육페는 60 엠버추가<br>
+                    초페는 30엠버추가<br><br>
+                    
+                    🌠스페셜 공룡🌠<br>
+                    🦖일반 기가노토 : 80<br>
+                    🦖던전 기가노토 : 220<br>
+                    🦜일반 케찰 : 80<br>
+                    🦜던전 케찰 : 120<br>
+                    🦤대형도도 일반(크기2.5이상) : 70<br>
+                    🦤초소형도도 일반(0.7)이하:50<br>
+                    🐉메갈로사우르스 던전 : 100<br>
+                    🦧메가테리움 던전 : 100<br>
+                    🦄유니콘 : 100<br>
+                    🐖다에오돈 던전:50<br>
+                    🐊던전트로오돈: 60<br>
+                    🦎던전페고메스탁스: 60<br><br>
+                    
+                    🐯스프 브루 스테이크 상점🐯<br>
+                    🐅스프 개당 강먼 2개<br>
+                    🐅계몽스프 개당 사탕 1개<br>
+                    🐅브루 100개 강먼 12개<br>
+                    🐅스테이크(쉐도우/배틀타르트) 개당 강먼 2개<br><br>
+                    
+                    🍀키블 상점🍀<br>
+                    ☘일반키블 개당 강먼3개(1엠버)<br>
+                    ☘그리핀키블 개당 15엠버<br><br>
+                    
+                    korea773<br><br>
+                    
+                    🌲아이템 상점🌲<br>
+                    (아이템 판매 시 가격 지켜주세요!!)<br><br>
+                    
+                    🌳무터 1개 45엠버<br>
+                    🌳잠자리날개 1개 10엠버<br>
+                    🌳절벽토대 1개 10엠버<br>
+                    🌳개구리발 1개 10엠버<br>
+                    🌳솥 2개 5엠버<br>
+                    🗝던전 열쇠1개. 15엠버<br>
+                     초페.개당  2000원<br>
+                     육페 줄넘기  개당 4000원<br>
+                     검은곰 4200원<br>
+                      요요.  5000원<br>
+                     핑크곰 탁구채3000원<br>
+                    일반곰 2700원<br><br>
+                    
+                    (규칙은 언제든지 수정및 추가가 될수 있습니다)<br>
+                    공지 확인코드 (86401)<br>
+                    🤩이벤트는 제가 심심하면 합니다🤩<br><br><br>
+                    
+                    
+                    문제발생 혹은 핵 엠캐 중국인등 신고하실땐 여기로오세요<br><br>
+                    
+                    https://open.kakao.com/o/gocAvZHg
+                    </p>
+            </div>
+        </div>
+    </section>
 
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
+    </footer>
 </body>
 </html>
