@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
 const app = express();
+require('dotenv').config();  // 환경 변수 로드
 
 app.use(cors({
     origin: 'https://jypark8084.github.io',
@@ -11,12 +12,12 @@ app.use(cors({
 
 app.use(express.json());
 
-// MySQL 연결
+// MySQL 연결 설정 (CloudType 환경 변수 사용)
 const db = mysql.createConnection({
-    host: 'localhost',  // 가상 머신 Ubuntu에서 실행 중이므로 localhost 사용
-    user: 'root',       // MySQL 사용자 이름
-    password: '비밀번호입력', // 설정한 MySQL 비밀번호 입력
-    database: 'page_counter'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
 db.connect(err => {
@@ -27,7 +28,7 @@ db.connect(err => {
     }
 });
 
-// 조회수 증가 API
+// API 라우트 설정 (조회수 증가 & 조회)
 app.post('/api/views', (req, res) => {
     const { pageId } = req.body;
     if (!pageId) {
@@ -55,19 +56,6 @@ app.post('/api/views', (req, res) => {
     });
 });
 
-// 조회수 가져오기 API
-app.get('/api/views/:pageId', (req, res) => {
-    const { pageId } = req.params;
-
-    db.query('SELECT views FROM page_views WHERE page_id = ?', [pageId], (err, rows) => {
-        if (err) {
-            console.error('조회수 조회 오류:', err);
-            return res.status(500).json({ error: '조회수 불러오기 실패' });
-        }
-        res.json({ pageId, views: rows.length > 0 ? rows[0].views : 0 });
-    });
-});
-
 app.listen(3000, () => {
-    console.log('서버 실행 중: http://localhost:3000');
+    console.log('서버 실행 중');
 });

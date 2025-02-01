@@ -114,10 +114,10 @@
     </section>
 
     <script>
-        const pageId = 'examplePage'; // 조회할 페이지 ID
-        const apiURL = 'https://port-0-jypark8084-m5ru0lmrc98ed9b1.sel4.cloudtype.app/api/views';
+        const apiURL = 'https://port-0-node-server-m5ru0lmrc98ed9b1.sel4.cloudtype.app/api/views';
 
-    
+        const pageId = 'examplePage';
+
         // 조회수 증가 API 호출
         fetch(apiURL, {
             method: 'POST',
@@ -134,10 +134,12 @@
             console.error('조회수 증가 실패:', error);
             document.getElementById('viewCounter').innerText = '조회수 로드 실패';
         });
+
     </script>
     
     
     <script src="scripts/main.js"></script>
+    <script src="index.js"></script>
     <footer>
         <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
     </footer>
