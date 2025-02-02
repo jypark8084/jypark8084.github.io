@@ -27,6 +27,11 @@ header {
     font-weight: bold;
 }
 
+.logo a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -541,7 +546,7 @@ img {
         font-size: 14px; /* 전체 텍스트 크기 감소 */
     }
 
-    .logo {
+    .logo{
         font-size: 20px;
     }
 

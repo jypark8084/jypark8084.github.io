@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/main/ultlmateark.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    position: relative;
+    width: 90vw;
+    max-width: 512px;
+    aspect-ratio: 1 / 1;
+    background-image: url('/image/moble\ ark.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    z-index: 1000;
+}
+.popup.hidden {
+    display: none;
+}
+.write-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+.write-button:hover {
+    background-color: #e64a19;
+}
+.login-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* 맵 스타일 */
+#map, #mapPreview {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('/arkmap/arkmap.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: grab;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.popup.hidden {
+    display: none;
+}

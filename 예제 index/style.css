@@ -27,6 +27,12 @@ header {
     font-weight: bold;
 }
 
+.logo a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+}
+
+
 /* Hero Section */
 .hero {
     background-color: #000; /* 기본 배경색 추가 */
