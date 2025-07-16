@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #ffd744;
+}
+
+#navli ul {
+    list-style: none;
+    display: flex;
+}
+
+#navli ul li {
+    margin: 0 15px;
+}
+
+#navli ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+#navli ul li a:hover {
+    color: #ffd744;
+}
+
+.hero {
+    background-image: url('../../main/ultlmateark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffffd0;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* ark-info */
+#ark-info {
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+}
+
+#ark-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffd744;
+    border-bottom: 2px solid #ffd744;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#ark-info ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+#ark-info li {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    list-style: disc;
+}
+
+/* about section */
+#about {
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+#about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffd744;
+    border-bottom: 2px solid #ffd744;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#about p {
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.faq-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #121212;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.question {
+    font-weight: bold;
+    color: #121212;
+    font-size: 1.1rem;
+}
+
+.answer {
+    margin-top: 5px;
+    padding-left: 20px;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* footer */
+footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+.pre-reg-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #ffd744;
+    color: #121212;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pre-reg-button:hover {
+    background-color: #ffc107;
+}
+
+
+/* 반응형 */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    #navli ul li a {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    #ark-info h2,
+    #about h2,
+    .faq-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-item {
+        padding: 10px;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .answer {
+        font-size: 0.9rem;
+        padding-left: 10px;
+    }
+}

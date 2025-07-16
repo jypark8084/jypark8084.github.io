@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="google-site-verification" content="Xh7g6uMDnEDu5vp4eVjLELplnHJBVopTGF15H6S_Jz8" />
+    <meta property="og:title" content="모바일 아크 정보" />
+    <meta property="og:description" content="made by 대리인" />
+    <meta property="og:image" content="main/ultlmateark.jpg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 아크 정보</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="/scripts/firebase-init.js"></script>
+    <script type="module" src="/scripts/auth.js"></script>
+    <script type="module" src="/scripts/sudebarMenu.js"></script>
+    <script type="text/javascript">
+        function toggleNotice() {
+            var notice = document.getElementById('notice');
+            if (notice.style.display === 'none' || notice.style.display === '') {
+                notice.style.display = 'block';
+            } else {
+                notice.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">모바일 아크</div>
+        <div class="nav-login-hamburger">
+            <nav>
+                <ul>
+                    <li><a id="loginLink" href="/login/login/login.html">로그인</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 사이드 메뉴 -->
+    <aside class="sidebar" id="sidebarMenu">
+        <div class="close-btn" id="closeBtn">&times;</div>
+        <h2>목록</h2>
+        <ul>
+            <li><a href="/uark/">아크 얼티메이트 소식</a></li>
+            <li><a href="#event">비공식 서버</a></li>
+            <li><a href="#community">아크 명령어</a></li>
+            <li><a href="#guides">니트라도</a></li>
+            <li><a href="#community">후원자</a></li>
+        </ul>
+    </aside>
+    
+    <section id="home" class="hero">
+        <h1>최신 게임 꿀팁과 정보</h1>
+        <p>게임 관련 최신 뉴스와 팁을 확인하세요!</p>
+    </section>
+
+    <!-- 홍보글 섹션 -->
+    <section id="promotion" class="content-section">
+        
+        <div class="promotion-text">
+            <h2>KOREA 365 (비공식 / PVE)</h2>
+            <img src="korea 365.jpg" alt="KOREA 365 서버 이미지" class="centered-image">
+            <p>서버 인원: 12</p>
+            <p>카톡방 인원: 55</p>
+            <p>어드민: 아브라함/도깨비 [동고집, 대리인 톡방 부방]</p>
+            <button onclick="toggleNotice()">공지 보기</button>
+            <div id="notice" style="display: none; margin-top: 20px;">
+                <p>오픈프로필 아니신 유저분들과<br>
+                    게임내 단톡방과 유저명이 다르신분은<br>
+                    지금 현시간부터 강제퇴장되시며 <br><br>
+                    
+                    재입장불가합니다.<br><br>
+                    
+                    부족끼리 비번공유중 이신분은 <br>
+                    부족명단 캡쳐하여 개인톡으로 부탁드립니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 대리인. 모든 권리와 저작권 보유.</p>
+    </footer>
+</body>
+</html>
