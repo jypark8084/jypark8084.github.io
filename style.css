@@ -6,25 +6,28 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #111;
     color: #e0e0e0;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #1f1f1f;
+    background-color: #1c1c1c;
     color: #e0e0e0;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     /* nav 아래로 햄버거를 위치시키기 위해 flex-direction: column;을 고려할 수도 있으나
        현재 구조에서는 필요 없음 */
 }
 
 .logo {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
+    color: #ffd744;
 }
 
 .logo a {
@@ -45,6 +48,8 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .hero {
@@ -70,6 +75,8 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .posts {
@@ -246,6 +253,8 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     position: relative; /* 밑줄을 애니메이션 효과로 처리하기 위해 position 추가 */
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 nav ul li a::after {
@@ -253,15 +262,19 @@ nav ul li a::after {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #ffd744; 
+    background-color: #ffd744;
     left: 0;
-    bottom: -5px; 
-    transition: width 0.3s ease; 
-    font-weight: 600; 
+    bottom: -5px;
+    transition: width 0.3s ease;
+    font-weight: 600;
 }
 
 nav ul li a:hover::after {
-    width: 100%; 
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ffd744;
 }
 
 /* Hero Section */
@@ -275,28 +288,31 @@ nav ul li a:hover::after {
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 16px;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 16px;
+    margin-bottom: 24px;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 12px 26px;
     background-color: #ff4757;
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #e84118;
+    background-color: #ff6b81;
+    transform: translateY(-3px);
 }
 
 /* Features Section */
